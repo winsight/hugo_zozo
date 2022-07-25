@@ -21,6 +21,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.DEPLOY_KEY }}
-          EXTERNAL_REPOSITORY: winsight/hugo_zozo
+
           PUBLISH_BRANCH: pages
           PUBLISH_DIR: ./public
