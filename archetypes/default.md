@@ -9,6 +9,5 @@ keywords: []
 description: ""
 slug: ""
 Navbar: false
-comments: false
 ---
 
