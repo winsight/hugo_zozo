@@ -2,7 +2,10 @@
 
 <body>
     <div class="main animate__animated animate__fadeInDown">
+        <!--{ if .Site.Params.Navbar }-->
+        {{ if (.Param "Navbar") }}
         {{ partial "nav.html" . }}
+        {{ end }}
         {{ partial "header.html" . }}
         <div class="content">
             <div class="post_page">
