@@ -28,34 +28,34 @@ Summary: 测试
 2
 
 ```html
-{/{< office src="44a52742/测试.xlsx" >}/}
+{/{< office src="测试.xlsx" >}/}
 ```
 
-{{< office src="44a52742/测试.xlsx" >}}
+{{< office src="测试.xlsx" >}}
 
 3
 
 ```html
-{/{< office src="44a52742/测试.docx" >}/}
+{/{< office src="测试.docx" >}/}
 ```
 
-{{< office src="44a52742/测试.docx" >}}
+{{< office src="测试.docx" >}}
 
 4
 
 ```html
-{/{< office src="44a52742/测试.pptx" >}/}
+{/{< office src="测试.pptx" >}/}
 ```
 
-{{< office src="44a52742/测试.pptx" >}}
+{{< office src="测试.pptx" >}}
 
 5
 
 ```html
-{/{< office src="44a52742/测试.pdf" >}/}
+{/{< office src="测试.pdf" >}/}
 ```
 
-{{< office src="44a52742/测试.pdf" >}}
+{{< office src="测试.pdf" >}}
 
 ### 二、pdf嵌入
 
