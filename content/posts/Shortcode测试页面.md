@@ -16,35 +16,35 @@ Summary: 测试
 1
 
 ```html
-<iframe src='https://view.officeapps.live.com/op/view.aspx?src=https://zozo.sswin.site/posts/44a52742/测试.xlsx' width='100%'  frameborder='1'> </iframe>
+<iframe src='https://view.officeapps.live.com/op/view.aspx?src=https://zozo.sswin.site/posts/44a52742/测试.xlsx' scrolling="no" width="100%" height="400px" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 ```
 
 
 
-<iframe src='https://view.officeapps.live.com/op/view.aspx?src=https://zozo.sswin.site/posts/44a52742/测试.xlsx' width='100%'  frameborder='1'> </iframe>
+<iframe src='https://view.officeapps.live.com/op/view.aspx?src=https://zozo.sswin.site/posts/44a52742/测试.xlsx' scrolling="no" width="100%" height="400px" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 
 2
 
-```go
-{{< office src="44a52742/测试.xlsx" >}}
+```html
+{/{< office src="44a52742/测试.xlsx" >}/}
 ```
 
 {{< office src="44a52742/测试.xlsx" >}}
 
 3
 
-```go
-{{< office src="44a52742/测试.docx" >}}
+```html
+{/{< office src="44a52742/测试.docx" >}/}
 ```
 
 {{< office src="44a52742/测试.docx" >}}
 
 4
 
-```go
-{{< office src="44a52742/测试.pptx" >}}
+```html
+{/{< office src="44a52742/测试.pptx" >}/}
 ```
 
 {{< office src="44a52742/测试.pptx" >}}
@@ -53,11 +53,17 @@ Summary: 测试
 
 ### 二、pdf嵌入
 
-
+```html
+{/{< pdfjs url="测试.pdf" >}/}
+```
 
 {{< pdfjs url="测试.pdf" >}}
 
 2
+
+```html
+{/{< pdf url="测试.pdf" >}/}
+```
 
 {{< pdf url="测试.pdf" >}}
 
