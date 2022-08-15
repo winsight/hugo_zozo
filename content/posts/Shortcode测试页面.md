@@ -49,7 +49,13 @@ Summary: 测试
 
 {{< office src="44a52742/测试.pptx" >}}
 
+5
 
+```html
+{/{< office src="44a52742/测试.pdf" >}/}
+```
+
+{{< office src="44a52742/测试.pdf" >}}
 
 ### 二、pdf嵌入
 
