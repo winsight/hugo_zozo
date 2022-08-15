@@ -11,13 +11,47 @@ Navbar: false
 Summary: 测试
 ---
 
-### 一、文件嵌入
+### 一、office文件嵌入
 
-{{< office src="Shortcode测试页面/ceshi.xlsx" >}}
+1
+
+```html
+<iframe src='https://view.officeapps.live.com/op/view.aspx?src=https://zozo.sswin.site/posts/%E5%9B%BD%E7%A7%91%E5%A4%A7%E4%BF%A1%E6%81%AF%E6%B1%87%E6%80%BB/%E4%BD%8F%E5%AE%BF%E6%9F%A5%E8%AF%A2.xlsx' width='100%'  frameborder='1'> </iframe>
+```
 
 
 
 <iframe src='https://view.officeapps.live.com/op/view.aspx?src=https://zozo.sswin.site/posts/%E5%9B%BD%E7%A7%91%E5%A4%A7%E4%BF%A1%E6%81%AF%E6%B1%87%E6%80%BB/%E4%BD%8F%E5%AE%BF%E6%9F%A5%E8%AF%A2.xlsx' width='100%'  frameborder='1'> </iframe>
+
+
+
+2
+
+```go
+{{< office src="Shortcode测试页面/测试.xlsx" >}}
+```
+
+{{< office src="Shortcode测试页面/测试.xlsx" >}}
+
+3
+
+```go
+{{< office src="Shortcode测试页面/测试.docx" >}}
+```
+
+{{< office src="Shortcode测试页面/测试.pdf" >}}
+
+4
+
+```go
+{{< office src="Shortcode测试页面/测试.pptx" >}}
+```
+
+{{< office src="Shortcode测试页面/测试.pdf" >}}
+
+
+
+### 二、pdf嵌入
 
 
 
