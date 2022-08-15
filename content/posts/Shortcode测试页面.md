@@ -39,7 +39,7 @@ Summary: 测试
 {{< office src="44a52742/测试.docx" >}}
 ```
 
-{{< office src="44a52742/测试.pdf" >}}
+{{< office src="44a52742/测试.docx" >}}
 
 4
 
@@ -47,7 +47,7 @@ Summary: 测试
 {{< office src="44a52742/测试.pptx" >}}
 ```
 
-{{< office src="44a52742/测试.pdf" >}}
+{{< office src="44a52742/测试.pptx" >}}
 
 
 
