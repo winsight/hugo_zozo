@@ -16,38 +16,38 @@ Summary: 测试
 1
 
 ```html
-<iframe src='https://view.officeapps.live.com/op/view.aspx?src=https://zozo.sswin.site/posts/%E5%9B%BD%E7%A7%91%E5%A4%A7%E4%BF%A1%E6%81%AF%E6%B1%87%E6%80%BB/%E4%BD%8F%E5%AE%BF%E6%9F%A5%E8%AF%A2.xlsx' width='100%'  frameborder='1'> </iframe>
+<iframe src='https://view.officeapps.live.com/op/view.aspx?src=https://zozo.sswin.site/posts/44a52742/测试.xlsx' width='100%'  frameborder='1'> </iframe>
 ```
 
 
 
-<iframe src='https://view.officeapps.live.com/op/view.aspx?src=https://zozo.sswin.site/posts/%E5%9B%BD%E7%A7%91%E5%A4%A7%E4%BF%A1%E6%81%AF%E6%B1%87%E6%80%BB/%E4%BD%8F%E5%AE%BF%E6%9F%A5%E8%AF%A2.xlsx' width='100%'  frameborder='1'> </iframe>
+<iframe src='https://view.officeapps.live.com/op/view.aspx?src=https://zozo.sswin.site/posts/44a52742/测试.xlsx' width='100%'  frameborder='1'> </iframe>
 
 
 
 2
 
 ```go
-{{< office src="Shortcode测试页面/测试.xlsx" >}}
+{{< office src="44a52742/测试.xlsx" >}}
 ```
 
-{{< office src="Shortcode测试页面/测试.xlsx" >}}
+{{< office src="44a52742/测试.xlsx" >}}
 
 3
 
 ```go
-{{< office src="Shortcode测试页面/测试.docx" >}}
+{{< office src="44a52742/测试.docx" >}}
 ```
 
-{{< office src="Shortcode测试页面/测试.pdf" >}}
+{{< office src="44a52742/测试.pdf" >}}
 
 4
 
 ```go
-{{< office src="Shortcode测试页面/测试.pptx" >}}
+{{< office src="44a52742/测试.pptx" >}}
 ```
 
-{{< office src="Shortcode测试页面/测试.pdf" >}}
+{{< office src="44a52742/测试.pdf" >}}
 
 
 
@@ -55,11 +55,11 @@ Summary: 测试
 
 
 
-{{< pdfjs url="迎新工作安排8_15.pdf" >}}
+{{< pdfjs url="测试.pdf" >}}
 
 2
 
-{{< pdf url="迎新工作安排8_15.pdf" >}}
+{{< pdf url="测试.pdf" >}}
 
 3
 
