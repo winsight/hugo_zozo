@@ -50,7 +50,7 @@ pygmentscodefencesguesssyntax = true
   enableSummary = true                                                 # display the article summary  # 是否显示文章摘要
   mainSections = ["posts","post"]
   Navbar = true
-  comments = true
+  Comments = true
   
 # waline.
 # You can get your appid and appkey from https://leancloud.cn
