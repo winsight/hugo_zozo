@@ -73,5 +73,10 @@ Summary: 测试
 
 {{< pdf url="测试.pdf" >}}
 
-3
+### 三、3D嵌入
 
+```html
+{/{< 3d src="avatar.glb" >}/}
+```
+
+{{< 3d src="avatar.glb" >}}
