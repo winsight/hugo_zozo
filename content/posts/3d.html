@@ -1,0 +1,154 @@
+<!--
+/* @license
+ * Copyright 2020 Google Inc. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the 'License');
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an 'AS IS' BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>&lt;model-viewer&gt;</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Easily display interactive 3D models on the web and in AR">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="twitter:card" content="player" />
+  <meta name="twitter:site" content="modelviewer" />
+  <meta name="twitter:player:width" content="480" />
+  <meta name="twitter:player:height" content="480" />
+  <meta name="twitter:player"
+    content="https://modelviewer.dev/examples/twitter/player.html?src=https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb&poster=https://modelviewer.dev/shared-assets/models/NeilArmstrong.webp&alt=Neil%20Armstrong%27s%20Spacesuit%20from%20the%20Smithsonian%20Digitization%20Programs%20Office%20and%20National%20Air%20and%20Space%20Museum&environmentImage=https://modelviewer.dev/shared-assets/environments/moon_1k.hdr" />
+  <meta property="og:title" content="3D model-viewer embed" />
+  <meta property="og:description"
+    content="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" />
+  <meta property="og:image" content="https://modelviewer.dev/shared-assets/models/NeilArmstrongTwitter.png" />
+
+  <link type="text/css" href="https://modelviewer.dev/styles/examples.css" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/png" href="https://modelviewer.dev/assets/favicon.png" />
+
+  <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+  <script src="https://modelviewer.dev/node_modules/focus-visible/dist/focus-visible.js" defer></script>
+
+  <script>
+    window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+    ga('create', 'UA-169901325-1', { 'storage': 'none' });
+    ga('set', 'referrer', document.referrer.split('?')[0]);
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  <style>
+    .demo model-viewer {
+      background-color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="sample">
+    <div id="demo-container" class="demo"></div>
+    <div class="content">
+      <div class="wrapper">
+        
+        <div class="heading">
+          <div class="lockup zero-interaction">
+            <div class="icon-button icon-modelviewer-black"></div>
+            <h1><span class="attribute">&lt;model-viewer&gt;</span></h1>
+          </div>
+        </div>
+
+        <div id="section-quick-start">
+          <h3 class="grouping-title grouping-title-new quick-start">Quick Start</h3>
+          <div class="quick-start-example">
+            <example-snippet inert-script stamp-to="demo-container" highlight-as="html">
+              <template>
+                <!-- Import the component -->
+                <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+                <!-- Use it like any other HTML element -->
+                <model-viewer
+                  alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
+                  src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" ar ar-modes="webxr scene-viewer quick-look"
+                  environment-image="https://modelviewer.dev/shared-assets/environments/moon_1k.hdr"
+                  poster="https://modelviewer.dev/shared-assets/models/NeilArmstrong.webp" shadow-intensity="1" camera-controls
+                  touch-action="pan-y"></model-viewer>
+              </template>
+            </example-snippet>
+          </div>
+        </div>
+
+
+        <a href="https://github.com/google/model-viewer/discussions">
+          <img src="https://img.shields.io/github/stars/google/model-viewer.svg?style=social&label=Star&maxAge=2592000"
+            alt="Github Discussions" />
+        </a>
+
+
+
+        <div id="section-editor">
+          <h3 class="grouping-title grouping-title-new border-bottom">Tools</h3>
+          <ol class="new-list-example">
+            <li>
+              <h4>
+                Use our <a href="https://modelviewer.dev/editor">Editor</a> to test your 3D models and download a starter website.
+              </h4>
+            </li>
+            <li>
+              <h4>
+                Generate your own <a href="https://modelviewer.dev/examples/twitter/generator.html">3D Twitter card</a> for any website.
+              </h4>
+            </li>
+          </ol>
+        </div>
+
+        <div id="section-documentation">
+          <h3 class="grouping-title grouping-title-new border-bottom">Documentation</h3>
+          <ol class="new-list-example">
+            <li>
+              <h4>
+                API <a href="https://modelviewer.dev/docs/index.html">Documentation</a> &amp; <a
+                  href="https://modelviewer.dev/examples/augmentedreality/index.html">Examples</a>
+              </h4>
+            </li>
+          </ol>
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <script type="module" src="https://modelviewer.dev/examples/built/docs-and-examples.js">
+  </script>
+  <script type="module">
+    (() => { initFooterLinks(); })();
+  </script>
+
+
+  <!-- Documentation-specific dependencies: -->
+  <script type="module" src="https://modelviewer.dev/examples/built/dependencies.js">
+  </script>
+
+  <!-- Loads <model-viewer> on modern browsers: -->
+  <script type="module" src="https://modelviewer.dev/node_modules/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+</body>
+
+</html>
