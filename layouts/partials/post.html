@@ -36,7 +36,7 @@
     {{ if or ($paginator.HasPrev) ($paginator.HasNext) }}
     {{ if $paginator.HasPrev }}
     <a href="{{$paginator.Prev.URL}}" class="pre">
-        {{ i18n "prev_page" }}next
+        {{ i18n "prev_page" }}
     </a>
     {{ end }}
     {{ if $paginator.HasNext }}
