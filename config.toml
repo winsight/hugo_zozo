@@ -17,8 +17,8 @@ pygmentscodefencesguesssyntax = true
 [author]                               # essential                      # 必需
   name = "Sswin"
 
-[blackfriday]
-  smartypants = true
+#[blackfriday]
+#  smartypants = true
 
 [[menu.main]]                          # config your menu               # 配置菜单
   name = "主页"
