@@ -3,8 +3,8 @@ title: "如何在 Mac OS X 上安裝 Verilog 環境"
 date: 2022-09-05T12:04:48+08:00
 hidden: false
 draft: false
-tags: ["Verilog","技术"]
-keywords: ["Verilog","技术"]
+tags: ["Verilog","技术","转载"]
+keywords: ["Verilog","技术","转载"]
 description: ""
 Summary: ""
 Navbar: true
