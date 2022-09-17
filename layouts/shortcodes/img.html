@@ -1,7 +1,21 @@
-{{ $path := .Get "src" }}
-{{ $caption := .Get "title" }}
-<div class="fancybox">
-    <a data-fancybox="gallery" href="{{ $path | absURL }}" data-caption="{{ $caption }}">
-        <img src="{{ $path | absURL }}" />
-    </a>
-</div>
+<!-- image -->
+<figure {{ with .Get "class" }}class="{{.}}"{{ end }}>
+  {{ with .Get "link" }}<a href="{{ . }}">{{ end }}
+      <p align="center">
+      <img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"{{ end }} />
+  {{ if .Get "link" }}</a>{{ end }}
+</p>
+  {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr") }}
+  <figcaption>{{ if isset .Params "title" }}
+      <h4  align="center">{{ .Get "title" }}</h4>{{ end }}
+      {{ if or (.Get "caption") (.Get "attr") }}<p>
+      {{ .Get "caption" }}
+      {{ with .Get "attrlink" }}<a href="{{ . }}"> {{ end }}
+          {{ .Get "attr" }}
+      {{ if .Get "attrlink" }}</a> {{ end }}
+      </p> {{ end }}
+  </figcaption>
+  {{ end }}
+</figure>
+<!-- image -->
+
