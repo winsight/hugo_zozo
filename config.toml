@@ -69,7 +69,7 @@ pygmentscodefencesguesssyntax = true
   # weibo = " "
   # instagram = " "
   mail = "mailto:me@sswin.site"
-  telegram = "//t.me/karlcoolboy"
+  telegram = "//t.me/karl_s_bot"
 
 [markup]
 [markup.goldmark]
