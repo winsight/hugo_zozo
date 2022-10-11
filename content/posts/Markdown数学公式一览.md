@@ -73,25 +73,60 @@ comments: true
 
 ```latex
 \frac{d}{dx}e^{ax} = ae^{ex} \sum_{i=1}^{n}(X_i-\overline{X})^2
-
-
 ```
 
 $$\frac{d}{dx}e^{ax} = ae^{ex} \sum_{i=1}^{n}(X_i-\overline{X})^2$$
 
 ### 14. 添加
 
-$$\sum\beta_{测} = 2519^{°}58^{′}29^{″} \space\space\space\space\space \sum\beta_{理} = 2520^{°}00^{′}00^{″} \\ f_{\beta允} = \pm40^{″}\sqrt{n} = \pm160^{″} \space\space\space\space\space f_{\beta} = \sum\beta_{理} - \sum\beta_{测} = 91^{″} \le 160^{″} \\ f_y = \sum \Delta y_测 = 0.113m \space\space\space\space\space f_x = \sum \Delta x_测 = -0.024m \\ 全长闭合差\space f = \sqrt{f_x^2 + f_y^2} = 0.1155m \\ 允许相对闭合差 \space k = \frac{1}{6000} \\ 全长相对闭合差 k^{′} = \frac{1}{\sum{D}/{f}} \le \frac{1}{6000}$$
+```latex
+\sum\beta_{测} = 2519^{°}58^{′}29^{″} \space\space\space\space\space \sum\beta_{理} = 2520^{°}00^{′}00^{″} \\ 
+
+f_{\beta允} = \pm40^{″}\sqrt{n} = \pm160^{″} \space\space\space\space\space f_{\beta} = \sum\beta_{理} - \sum\beta_{测} = 91^{″} \le 160^{″} \\ 
+
+f_y = \sum \Delta y_测 = 0.113m \space\space\space\space\space f_x = \sum \Delta x_测 = -0.024m \\
+
+全长闭合差\space f = \sqrt{f_x^2 + f_y^2} = 0.1155m \\ 允许相对闭合差 \space k = \frac{1}{6000} \\ 全长相对闭合差 k^{′} = \frac{1}{\sum{D}/{f}} \le \frac{1}{6000}
+```
 
  
 
-$$\sum\beta_{测} = 539^{°}59^{′}13^{″} \space\space\space\space\space \sum\beta_{理} = 540^{°}00^{′}00^{″} \\ f_{\beta允} = \pm40^{″}\sqrt{n} = \pm89.4^{″} \space\space\space\space\space f_{\beta} = \sum\beta_{理} - \sum\beta_{测} = -47^{″} \le f_{\beta允} \\ f_x = \sum \Delta x_测 = -0.0120m \space\space\space\space\space f_y = \sum \Delta y_测 = 0.0250m \\ 全长闭合差\space f = \sqrt{f_x^2 + f_y^2} = 0.0277m \\ 允许相对闭合差 \space k = \frac{1}{6000} \\ 全长相对闭合差 k^{′} = \frac{1}{\sum{D}/{f}} \le \frac{1}{6000}$$
+$$
+\sum\beta_{测} = 539^{°}59^{′}13^{″} \space\space\space\space\space \sum\beta_{理} = 540^{°}00^{′}00^{″} \\
+
+f_{\beta允} = \pm40^{″}\sqrt{n} = \pm89.4^{″} \space\space\space\space\space f_{\beta} = \sum\beta_{理} - \sum\beta_{测} = -47^{″} \le f_{\beta允} \\ 
+
+f_x = \sum \Delta x_测 = -0.0120m \space\space\space\space\space f_y = \sum \Delta y_测 = 0.0250m \\ 
+
+全长闭合差\space f = \sqrt{f_x^2 + f_y^2} = 0.0277m \\ 
+
+允许相对闭合差 \space k = \frac{1}{6000} \\ 
+
+全长相对闭合差 k^{′} = \frac{1}{\sum{D}/{f}} \le \frac{1}{6000}
+$$
 
 ### 15. 多行公式
 
  
 
-$$方法一： f(x)=\left\{ \begin{aligned} x & = \cos(t) \\ y & = \sin(t) \\ z & = \frac xy \end{aligned} \right. \\ 方法二： F^{HLLC}=\left\{ \begin{array}{rcl} F_L & & {0 < S_L}\\ F^*_L & & {S_L \leq 0 < S_M}\\ F^*_R & & {S_M \leq 0 < S_R}\\ F_R & & {S_R \leq 0} \end{array} \right. \\ 方法三: f(x)= \begin{cases} 0& \text{x=0}\\ 1& \text{x!=0} \end{cases}$$
+```latex
+\begin{align}
+方法一： &f(x)=\left\{ \begin{aligned} x & = \cos(t) \\ y & = \sin(t) \\ z & = \frac xy \end{aligned} \right. \\ 
+方法二：& F^{HLLC}=\left\{ \begin{array}{rcl} F_L & & {0 < S_L}\\ F^*_L & & {S_L \leq 0 < S_M}\\ F^*_R & & {S_M \leq 0 < S_R}\\ F_R & & {S_R \leq 0} \end{array} \right. \\ 
+方法三: &f(x)= \begin{cases} 0& \text{x=0}\\ 1& \text{x!=0} \end{cases}
+\end{align}
+```
+
+
+
+$$
+\begin{align}
+方法一： &f(x)=\left\{ \begin{aligned} x & = \cos(t) \\ y & = \sin(t) \\ z & = \frac xy \end{aligned} \right. \\ 
+方法二：& F^{HLLC}=\left\{ \begin{array}{rcl} F_L & & {0 < S_L}\\ F^*_L & & {S_L \leq 0 < S_M}\\ F^*_R & & {S_M \leq 0 < S_R}\\ F_R & & {S_R \leq 0} \end{array} \right. \\ 
+方法三: &f(x)= \begin{cases} 0& \text{x=0}\\ 1& \text{x!=0} \end{cases}
+\end{align}
+$$
+
 
 
 
@@ -111,7 +146,12 @@ LATEX的数学公式由两种形式：行中公式和独立公式。
 $ 数学公式 $
 ```
 
+$ 数学公式 $
+
 独立公式可以用如下方法表示：
+$$
+数学公式
+$$
 
 ```latex
 $$ 数学公式 $$
@@ -120,17 +160,19 @@ $$ 数学公式 $$
 ### 2.如何输入上下标
 
 `^`表示上标，`_`表示下标。如果上下标的内容多于一个字符，需要用 `{}` 将这些内容括成一个整体。上下标可以嵌套，也可以同时使用。
-
+$$
+ x^{y^z}=(1+{\rm e}^x)^{-2xy^w} 
+$$
 
 
 ```latex
 $$ x^{y^z}=(1+{\rm e}^x)^{-2xy^w} $$
 ```
 
-
-
 另外，如果要在左右两边都有上下标，可以使用 `\sideset` 命令；也可以简单地在符号前面多打一个上下标，此时会以行内公式渲染。
-
+$$
+ \sideset{^1_2}{^3_4}\bigotimes \quad or \quad {^1_2}\bigotimes {^3_4} 
+$$
 
 
 ```latex
@@ -155,12 +197,13 @@ $$ \sideset{^1_2}{^3_4}\bigotimes \quad or \quad {^1_2}\bigotimes {^3_4} $$
 | \lVert  |  ‖   | \rVert  |  ‖   |
 
 
+$$
+f(x,y,z) = 3y^2z \left( 3+\frac{7x+5}{1+y^2} \right)
+$$
 
 ```latex
 $$ f(x,y,z) = 3y^2z \left( 3+\frac{7x+5}{1+y^2} \right) $$
 ```
-
-
 
 有时要用 `\left.` 或 `\right.` 进行匹配而不显示本身。
 
@@ -168,13 +211,13 @@ $$ f(x,y,z) = 3y^2z \left( 3+\frac{7x+5}{1+y^2} \right) $$
 
 通常使用 `\frac {分子} {分母}` 来生成一个分数，分数可多层嵌套。如果分式较为复杂，亦可使用 `分子 \over 分母` 此时分数仅有一层。
 
-
+$$
+\frac{a-1}{b-1} \quad or \quad {a+1 \over b+1}
+$$
 
 ```latex
 $$ \frac{a-1}{b-1} \quad or \quad {a+1 \over b+1} $$
 ```
-
-
 
 当分式 **仅有两个字符时** 可直接输入 `\frac ab` 来快速生成一个 。
 
@@ -182,6 +225,9 @@ $$ \frac{a-1}{b-1} \quad or \quad {a+1 \over b+1} $$
 
 使用 `\sqrt [根指数，省略时为2] {被开方数}` 命令输入开方。
 
+$$
+\sqrt{2} \quad or \quad \sqrt[n]{3} 
+$$
 
 
 ```latex
@@ -193,6 +239,10 @@ $$ \sqrt{2} \quad or \quad \sqrt[n]{3} $$
 ### 6．如何输入省略号
 
 数学公式中常见的省略号有两种，`\ldots` 表示与 **文本底线** 对齐的省略号，`\cdots` 表示与 **文本中线** 对齐的省略号。
+$$
+f(x_1,x_2,\underbrace{\ldots}_{\rm ldots} ,x_n) = x_1^2 + x_2^2 + \underbrace{\cdots}_{\rm cdots} + x_n^2 
+$$
+
 
 ```latex
 $$ f(x_1,x_2,\underbrace{\ldots}_{\rm ldots} ,x_n) = x_1^2 + x_2^2 + \underbrace{\cdots}_{\rm cdots} + x_n^2 $$
@@ -203,10 +253,18 @@ $$ f(x_1,x_2,\underbrace{\ldots}_{\rm ldots} ,x_n) = x_1^2 + x_2^2 + \underbrace
 ### 7．如何输入向量
 
 使用 `\vec{向量}` 来自动产生一个向量。也可以使用 `\overrightarrow` 等命令自定义字母上方的符号。
+$$
+ \vec{a} \cdot \vec{b}=0 
+$$
+
 
 ```latex
 $$ \vec{a} \cdot \vec{b}=0 $$
 ```
+
+$$
+ xy \text{ with arrows:} \quad \overleftarrow{xy} \; \mid \; \overleftrightarrow{xy} \; \mid \; \overrightarrow{xy} 
+$$
 
 
 
@@ -219,12 +277,14 @@ $$ xy \text{ with arrows:} \quad \overleftarrow{xy} \; \mid \; \overleftrightarr
 ### 8．如何输入积分
 
 使用 `\int_积分下限^积分上限 {被积表达式}` 来输入一个积分。
+$$
+\int_0^1 {x^2} \,{\rm d}x 
+$$
+
 
 ```latex
 $$ \int_0^1 {x^2} \,{\rm d}x $$
 ```
-
-
 
 本例中 `\,` 和 `{\rm d}` 部分可省略，但加入能使式子更美观，详见“[在字符间加入空格](https://www.zybuluo.com/codeep/note/163962#3在字符间加入空格)”及“[如何进行字体转换](https://www.zybuluo.com/codeep/note/163962#13如何进行字体转换)”。
 
@@ -232,6 +292,9 @@ $$ \int_0^1 {x^2} \,{\rm d}x $$
 
 使用 `\lim_{变量 \to 表达式} 表达式` 来输入一个极限。如有需求，可以更改 `\to` 符号至任意符号。
 
+$$
+\lim_{n \to \infty} \frac{1}{n(n+1)} \quad and \quad \lim_{x\leftarrow{示例}} \frac{1}{n(n+1)} 
+$$
 
 
 ```latex
@@ -243,6 +306,9 @@ $$ \lim_{n \to \infty} \frac{1}{n(n+1)} \quad and \quad \lim_{x\leftarrow{示例
 ### 10．如何输入累加、累乘运算
 
 使用 `\sum_{下标表达式}^{上标表达式} {累加表达式}` 来输入一个累加。与之类似，使用 `\prod` `\bigcup` `\bigcap` 来分别输入累乘、并集和交集，更多符号可参考“[其它特殊字符](https://www.zybuluo.com/codeep/note/163962#12如何输入其它特殊字符)”。 此类符号在行内显示时上下标表达式将会移至右上角和右下角，如 。
+$$
+\sum_{i=1}^n \frac{1}{i^2} \quad and \quad \prod_{i=1}^n \frac{1}{i^2} \quad and \quad \bigcup_{i=1}^{2} \Bbb{R}
+$$
 
 ```
 $$ \sum_{i=1}^n \frac{1}{i^2} \quad and \quad \prod_{i=1}^n \frac{1}{i^2} \quad and \quad \bigcup_{i=1}^{2} \Bbb{R} $$
@@ -342,7 +408,9 @@ $$ \sum_{i=1}^n \frac{1}{i^2} \quad and \quad \prod_{i=1}^n \frac{1}{i^2} \quad 
 
 若需要在特定文字顶部\底部放置内容，可使用 `\overset{顶部内容}{正常内容}` 和 `\underset{底部内容}{正常内容}` 命令。
 
-
+$$
+\qquad \overset{xx}{ABC} \;\; \mid \quad \overset{x^2}{\longmapsto}\ \, \mid \quad \overset{\bullet\circ\circ\bullet}{T}
+$$
 
 ```latex
 $$ \verb+\overset{above}{level}+ \qquad \overset{xx}{ABC} \;\; \mid \quad \overset{x^2}{\longmapsto}\ \, \mid \quad \overset{\bullet\circ\circ\bullet}{T} $$
@@ -411,6 +479,13 @@ $$ \verb+\overset{above}{level}+ \qquad \overset{xx}{ABC} \;\; \mid \quad \overs
 
 转换字体十分常用，例如在积分中：
 
+$$
+\begin{array}{cc}
+    \mathrm{Bad} & \mathrm{Better} \\
+    \hline \\
+    \int_0^1 x^2 dx & \int_0^1 x^2 \,{\rm d}x
+\end{array}
+$$
 
 
 ```latex
@@ -427,6 +502,11 @@ $$ \verb+\overset{above}{level}+ \qquad \overset{xx}{ABC} \;\; \mid \quad \overs
 
 使用 `\bbox[底色, (可选)边距, (可选)边框 border: 框宽度 框类型 框颜色]` 命令来高亮一行公式。 底色和框颜色支持详见“[更改文字颜色](http://home.ustc.edu.cn/~zzx2002/new/2021/08/04/mathjax/Ţ更改文字颜色-color)”，边距及框宽度支持 `绝对像素 px` 或 `相对大小 em`，框类型支持 `实线 solid` 或 `虚线 dashed`。
 
+$$
+\bbox[yellow]{
+    e^x=\lim_{n\to\infty} \left( 1+\frac{x}{n} \right)^n \qquad (1)
+}
+$$
 
 
 ```latex
@@ -436,6 +516,12 @@ $$
 }
 $$
 ```
+
+$$
+\bbox[#9ff, 5px]{ % 此处向外添加 5 像素的边距
+    e^x=\lim_{n\to\infty} \left( 1+\frac{x}{n} \right)^n \qquad (1)
+}
+$$
 
 
 
@@ -447,7 +533,12 @@ $$
 $$
 ```
 
-
+$$
+% 此处使用 0.5 倍行高作为边距，附加 2 像素的实线边框（Ctrl+Alt+Y 可见）
+\bbox[#2f3542, 0.5em, border:2px solid #f1f2f6]{
+    \color{#f1f2f6}{e^x=\lim_{n\to\infty} \left( 1+\frac{x}{n} \right)^n \qquad (1)}
+}
+$$
 
 ```latex
 $$
@@ -463,6 +554,22 @@ $$
 ### 15．大括号和行标的使用
 
 在 `\left` 和 `\right` 之后加上要使用的括号来创建自动匹配高度的圆括号 `(` `)`，方括号 `[` `]` 和花括号 `\{` `\}`。 在每个公式末尾前使用 `\tag {行标}` 来实现行标。
+$$
+f\left(
+   \left[ 
+     \frac{
+       1+\left\{x,y\right\}
+     }{
+       \left(
+          \frac xy + \frac yx
+       \right)
+       (u+1)
+     }+a
+   \right]^{3/2}
+\right)
+\tag {行标}
+$$
+
 
 ```latex
 $$
@@ -483,6 +590,13 @@ $$
 ```
 
 如果你需要在不同的行显示对应括号，可以在每一行对应处使用 `\left.` 或 `\right.` 来放一个“不存在的括号”。
+$$
+\begin{align*}
+    a=&\left(1+2+3+ \cdots \right. \\
+      &\cdots+\left. \infty-2+\infty-1+\infty\right)
+\end{align*}
+$$
+
 
 ```latex
 $$
@@ -496,6 +610,14 @@ $$
 
 
 如果你需要将大括号里面显示的分隔符也变大，可以使用 `\middle` 命令，此处分别使用单竖线 `|` 和双竖线 `\\|` 。
+$$
+\left\langle  
+    q \; \middle|
+        \frac{\frac xy}{\frac uv}
+    \middle\| p 
+\right\rangle
+$$
+
 
 ```latex
 $$
