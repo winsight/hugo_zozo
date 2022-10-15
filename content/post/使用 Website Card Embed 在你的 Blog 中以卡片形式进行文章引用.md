@@ -55,19 +55,9 @@ Website Card Embed 提供了降级方案
 
 ```html
 {{- if .IsNamedParams -}}
-<iframe
- 
-  src="你的域名/?url={{ .Get `url` }}&title={{ .Get `title` }}&description={{ .Get `description` }}&image={{ .Get `image` }}&favicon={{ .Get `favicon` }}"
- 
-  frameborder="no"
-></iframe>
+<iframe src="你的域名/?url={{ .Get `url` }}&title={{ .Get `title` }}&description={{ .Get `description` }}&image={{ .Get `image` }}&favicon={{ .Get `favicon` }}" frameborder="no"></iframe>
 {{- else -}}
-<iframe
- 
-  src="你的域名/?url={{ .Get 0 }}"
- 
-  frameborder="no"
-></iframe>
+<iframe src="你的域名/?url={{ .Get 0 }}" frameborder="no"></iframe>
 {{- end -}}
 ```
 
@@ -76,11 +66,13 @@ Website Card Embed 提供了降级方案
 当出现一个网站总是解析失败的时候，你需要考虑使用静态卡片了。仅需要添加 title、description 等而外参数就可以跳过解析直接生成卡片了。注意不要漏掉 url 参数，不然就会出现虽然渲染了卡片，但是不知道跳转到何处的问题。
 
 ```html
-{{< card title="What is Hugo"
-url="https://gohugo.io/about/what-is-hugo/"
-description="Hugo is a fast and modern static site generator written in Go, and designed to make website creation fun again."
-favicon="https://gohugo.io/favicon-32x32.png"
-image="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_11180610884299235099.png" >}}
+{{< card 
+        title="What is Hugo" 
+        url="https://gohugo.io/about/what-is-hugo/"
+        description="Hugo is a fast and modern static site generator written in Go, and designed to make website creation fun again."
+        favicon="https://gohugo.io/favicon-32x32.png"
+        image="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355abac7d4ca455_242906_filter_11180610884299235099.png" 
+        >}}
 ```
 
 想要支持夜间模式你的 `layouts/shortcodes/card.html` 代码需要修改为
@@ -88,18 +80,12 @@ image="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355ab
 ```html
 {{- if .IsNamedParams -}}
 <iframe
- 
-  data-src="https://website-card-embed-demo.vercel.app/?url={{ .Get `url` }}&title={{ .Get `title` }}&description={{ .Get `description` }}&image={{ .Get `image` }}&favicon={{ .Get `favicon` }}"
- 
-  frameborder="no"
-></iframe>
+        data-src="https://website-card-embed-demo.vercel.app/?url={{ .Get `url` }}&title={{ .Get `title` }}&description={{ .Get `description` }}&image={{ .Get `image` }}&favicon={{ .Get `favicon` }}"
+        frameborder="no"></iframe>
 {{- else -}}
 <iframe
- 
-  data-src="https://website-card-embed-demo.vercel.app/?url={{ .Get 0 }}"
- 
-  frameborder="no"
-></iframe>
+        data-src="https://website-card-embed-demo.vercel.app/?url={{ .Get 0 }}"
+        frameborder="no"></iframe>
 {{- end -}}
 ```
 
@@ -176,3 +162,32 @@ initSelectThemeListener();
 ```
 
 如果你使用的是其他支持夜间模式切换的主题，您也可以参考 `website-card-embed-loveit.js` 来自定义您的颜色模式判断方法。
+
+
+
+
+
+<iframe 
+  src="https://website-card-embed-demo.vercel.app/?url=https://twitter.com/priyathanyapie2/status/1581106529800896513" 
+  style="width:100%;height:124px" frameborder="no">
+</iframe>
+
+
+
+<iframe 
+  src="https://website-card-embed-demo.vercel.app/?url=https://weibo.com/5557126445/MapUw3f48" 
+  style="width:100%;height:124px" frameborder="no">
+</iframe>
+
+{{< card "https://weibo.com/5557126445/MapUw3f48" >}}
+
+{{< card url="https://twitter.com/eert91852016/status/1580955731032875008?s=61&t=XfTSFqTKT7WAuRG38oSl2w" title="推广示例" description="哔咔漫画最新地址 2022来了" >}}
+
+
+
+
+
+
+
+
+
