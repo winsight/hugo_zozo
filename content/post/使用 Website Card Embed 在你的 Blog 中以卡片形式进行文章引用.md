@@ -181,7 +181,7 @@ initSelectThemeListener();
 
 {{< card "https://weibo.com/5557126445/MapUw3f48" >}}
 
-{{< card url="https://twitter.com/eert91852016/status/1580955731032875008?s=61&t=XfTSFqTKT7WAuRG38oSl2w" title="推广示例" description="哔咔漫画最新地址 2022来了" >}}
+{{< card url="https://twitter.com/eert91852016/status/1580955731032875008?s=61&t=XfTSFqTKT7WAuRG38oSl2w" title="Twitter推广示例" description="哔咔漫画最新地址 2022来了" favicon="https://2022.picacg.one/build/imgs/apple-icon-57x57.png" image="https://2022.picacg.one/build/imgs/apple-icon-57x57.png">}}
 
 
 
