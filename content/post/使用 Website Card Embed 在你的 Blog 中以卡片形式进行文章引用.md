@@ -1,5 +1,5 @@
 ---
-title: "使用 Website Card Embed 在你的 Blog 中以卡片形式进行文章引用"
+title: "Website Card Embed"
 date: 2022-10-15T19:56:53+08:00
 slug: "d625589b"
 hidden: false
@@ -32,7 +32,13 @@ comments: true
 
 值得注意的是上面的方式仅在支持渲染 iframe 标签的 Markdown 引擎中使用，像 Github README 文件是不支持的
 
-Website Card Embed 提供了降级方案 `[![what-is-hugo](https://website-card-embed-demo.vercel.app/api/screenshot?url=https://gohugo.io/about/what-is-hugo/)](https://gohugo.io/about/what-is-hugo/)`，可以使用基础的 Markdown 语法渲染一张带链接的图片在 Github 中使用。
+Website Card Embed 提供了降级方案 
+
+```markdown
+[![what-is-hugo](https://website-card-embed-demo.vercel.app/api/screenshot?url=https://gohugo.io/about/what-is-hugo/)](https://gohugo.io/about/what-is-hugo/)
+```
+
+，可以使用基础的 Markdown 语法渲染一张带链接的图片在 Github 中使用。
 
 [![](https://website-card-embed.vercel.app/api/screenshot?url=https://gohugo.io/about/what-is-hugo/)](https://gohugo.io/about/what-is-hugo/)
 
