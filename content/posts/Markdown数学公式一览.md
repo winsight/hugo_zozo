@@ -11,8 +11,6 @@ Navbar: false
 comments: true
 ---
 
-
-
 <!--more-->
 
 
