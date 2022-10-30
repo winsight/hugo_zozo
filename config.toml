@@ -36,6 +36,11 @@ pygmentscodefencesguesssyntax = true
   identifier = "tags"
   url = "/tags/"
 [[menu.main]]
+  name = "链接"
+  weight = 30
+  identifier = "links"
+  url = "https://blogroll.sswin.site/"
+[[menu.main]]
   name = "关于"
   weight = 40
   identifier = "about"
