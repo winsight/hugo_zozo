@@ -2,6 +2,7 @@
 
 <body>
     <div class="main animate__animated animate__fadeInDown">
+        {{ partial "password.html" . }}
         <!--{ if .Site.Params.Navbar }-->
         {{ if (.Param "Navbar") }}
         {{ partial "nav.html" . }}

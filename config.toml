@@ -55,6 +55,7 @@ pygmentscodefencesguesssyntax = true
   enableSummary = true                                                 # display the article summary  # 是否显示文章摘要
   mainSections = ["posts","post"]
   Navbar = true
+  enablePassword = true
   Comments = true
   hugoEncryptorLanguage = "zh-cn"     # within ["zh-cn", "zh-cn"]
 
