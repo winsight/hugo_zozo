@@ -56,6 +56,8 @@ pygmentscodefencesguesssyntax = true
   mainSections = ["posts","post"]
   Navbar = true
   Comments = true
+  hugoEncryptorLanguage = "zh-cn"     # within ["zh-cn", "zh-cn"]
+
   
 # waline.
 # You can get your appid and appkey from https://leancloud.cn
