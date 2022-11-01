@@ -23,16 +23,8 @@ your content
     {{ end }}
   </div>
   <div class="hugo-encryptor-form">
-    <input
-      class="hugo-encryptor-input"
-      placeholder='{{ if eq .Site.Params.hugoEncryptorLanguage "en-us" }}Please input the password{{ else }}请输入密码{{ end }}'
-    />
-    <input
-      class="hugo-encryptor-button"
-      type="button"
-      value='{{ if eq .Site.Params.hugoEncryptorLanguage "en-us" }}Click to verify{{ else }}点击验证{{ end }}'
-      onclick="_click_handler(this)"
-    />
+    <input class="hugo-encryptor-input" placeholder='{{ if eq .Site.Params.hugoEncryptorLanguage "en-us" }}Please input the password{{ else }}请输入密码{{ end }}'/>
+    <input class="hugo-encryptor-button" onclick="_click_handler(this)" type="button" value='{{ if eq .Site.Params.hugoEncryptorLanguage "en-us" }}Click to verify{{ else }}点击验证{{ end }}'/>
   </div>
   <div
     class="hugo-encryptor-cipher-text"
