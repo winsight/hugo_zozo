@@ -10,6 +10,7 @@ description: ""
 Summary: ""
 Navbar: false
 comments: true
+math: false
 ---
 
 

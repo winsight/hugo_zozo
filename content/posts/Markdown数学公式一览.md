@@ -9,6 +9,7 @@ description: ""
 Summary: ""
 Navbar: false
 comments: true
+math: true
 ---
 
 <!--more-->
@@ -84,7 +85,6 @@ f_{\beta允} = \pm40^{″}\sqrt{n} = \pm160^{″} \space\space\space\space\space
 
 f_y = \sum \Delta y_测 = 0.113m \space\space\space\space\space f_x = \sum \Delta x_测 = -0.024m \\
 
-全长闭合差\space f = \sqrt{f_x^2 + f_y^2} = 0.1155m \\ 允许相对闭合差 \space k = \frac{1}{6000} \\ 全长相对闭合差 k^{′} = \frac{1}{\sum{D}/{f}} \le \frac{1}{6000}
 ```
 
  
@@ -95,12 +95,6 @@ $$
 f_{\beta允} = \pm40^{″}\sqrt{n} = \pm89.4^{″} \space\space\space\space\space f_{\beta} = \sum\beta_{理} - \sum\beta_{测} = -47^{″} \le f_{\beta允} \\ 
 
 f_x = \sum \Delta x_测 = -0.0120m \space\space\space\space\space f_y = \sum \Delta y_测 = 0.0250m \\ 
-
-全长闭合差\space f = \sqrt{f_x^2 + f_y^2} = 0.0277m \\ 
-
-允许相对闭合差 \space k = \frac{1}{6000} \\ 
-
-全长相对闭合差 k^{′} = \frac{1}{\sum{D}/{f}} \le \frac{1}{6000}
 $$
 
 ### 15. 多行公式
@@ -117,13 +111,7 @@ $$
 
 
 
-$$
-\begin{align}
-方法一： &f(x)=\left\{ \begin{aligned} x & = \cos(t) \\ y & = \sin(t) \\ z & = \frac xy \end{aligned} \right. \\ 
-方法二：& F^{HLLC}=\left\{ \begin{array}{rcl} F_L & & {0 < S_L}\\ F^*_L & & {S_L \leq 0 < S_M}\\ F^*_R & & {S_M \leq 0 < S_R}\\ F_R & & {S_R \leq 0} \end{array} \right. \\ 
-方法三: &f(x)= \begin{cases} 0& \text{x=0}\\ 1& \text{x!=0} \end{cases}
-\end{align}
-$$
+$$\begin{align}1: &f(x)=\left\{ \begin{aligned} x & = \cos(t) \\ y & = \sin(t) \\ z & = \frac xy \end{aligned} \right. \\ 2: & F^{HLLC}=\left\{ \begin{array}{rcl} F_L & & {0 < S_L}\\ F^*_L & & {S_L \leq 0 < S_M}\\ F^*_R & & {S_M \leq 0 < S_R}\\ F_R & & {S_R \leq 0} \end{array} \right. \\ 3: &f(x)= \begin{cases} 0& \text{x=0}\\ 1& \text{x!=0} \end{cases}\end{align}$$
 
 
 
@@ -159,7 +147,7 @@ $$ 数学公式 $$
 
 `^`表示上标，`_`表示下标。如果上下标的内容多于一个字符，需要用 `{}` 将这些内容括成一个整体。上下标可以嵌套，也可以同时使用。
 $$
- x^{y^z}=(1+{\rm e}^x)^{-2xy^w} 
+x^{y^z}=(1+{\rm e}^x)^{-2xy^w}
 $$
 
 
