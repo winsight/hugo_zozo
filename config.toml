@@ -75,8 +75,10 @@ pygmentscodefencesguesssyntax = true
   # facebook = " "
   # weibo = " "
   # instagram = " "
-  mail = "mailto:me@sswin.site"
+  WhatsApp = "sms://me.sswin.site"
+  mail = "mailto://me@sswin.site"
   telegram = "//t.me/karl_s_bot"
+  
 
 [markup]
 [markup.goldmark]
