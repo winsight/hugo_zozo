@@ -74,8 +74,8 @@ pygmentscodefencesguesssyntax = true
   # twitter = " "
   # facebook = " "
   # weibo = " "
-  # instagram = " "
-  Phone = "//sms://me.sswin.site"
+  # instagram = " 1"
+  Phone = "//sms:me@sswin.site"
   mail = "mailto://me@sswin.site"
   telegram = "//t.me/karl_s_bot"
   
