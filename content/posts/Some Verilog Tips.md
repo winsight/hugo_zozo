@@ -3,7 +3,6 @@ title: "Some Verilog Tips"
 date: 2022-11-09T10:42:51+08:00
 slug: "fc85bf3c"
 hidden: false
-draft: true
 tags: ["verilog","学习"]
 keywords: ["verilog","学习"]
 description: ""
