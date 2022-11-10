@@ -62,9 +62,9 @@ math: false
 
 
 
-## verilog中 `define 的使用
+## 三、verilog中 `define 的使用
 
-### 背景：
+### 1、背景：
 
 　　在最近实战开发中发现：对外部芯片进行初始化时，往往需要定义大量参数。若直接在module中通过localparam或者parameter进行参数定义的话，会带来两个问题：
 
@@ -73,54 +73,61 @@ math: false
 
 　　为了解决这两个问题，我想到了在之前在《verilog数字系统设计教程》（夏闻宇）看到过的`define宏定义+`inlude "file.v"文件包含来实现参数模块化设计的方式。
 
-### 实战：
+### 2、实战：
 
 #### 1.新建参数模块文件（我命名为para.v）；
 
-#### 2.在para.v文件中使用'define宏定义参数（部分、有错误）：　
+#### 2.在para.v文件中使用'define宏定义参数（部分、有错误）：
 
-　　　　//`define+name+参数 　
-　　　　`define 　　STATE_INIT　　  3'd0;
-　　　　`define 　　STATE_IDLE　 　 3'd1;
-　　　　`define 　　STATE_WRIT　　 3'd2;
-　　　　`define 　　STATE_READ　　3'd3;
-　　　　`define 　　STATE_WORK   3'd4;
-　　　　`define 　　STATE_RETU　　3'd5;
+```verilog
+//`define+name+参数 　
+`define 　　STATE_INIT　　  3'd0;
+`define 　　STATE_IDLE　 　 3'd1;
+`define 　　STATE_WRIT　　 3'd2;
+`define 　　STATE_READ　　3'd3;
+`define 　　STATE_WORK   3'd4;
+`define 　　STATE_RETU　　3'd5;
+```
 
 #### 3.在需要调用参数的文件init.v中使用`include "para.v"：
 
-　　　　`include "para.v"
+```verilog
+`include "para.v"
+```
 
 #### 4.在init.v文件需要参数的地方使用`name 调用（部分）：
 
-> state_init <= `INIT_0;
+ ```verilog
+ state_init <= `INIT_0;
+ ```
 
 #### 5.保存之后，程序报错：
-
-　　　　ERROR:HDLCompiler:806 - "F:/xilinx/pcm1864/pcm1864_3/v/init.v" Line 51: Syntax error near ";".
-　　　　ERROR:ProjectMgmt - 1 error(s) found while parsing design hierarchy.
+```verilog
+ERROR:HDLCompiler:806 - "F:/xilinx/pcm1864/v/init.v" Line 51: Syntax error near ";".
+ERROR:ProjectMgmt - 1 error(s) found while parsing design hierarchy.
+```
 
 #### 6.之后进行了两个多小时的调试（一直没发现问题所在= =），最终在书上的案例中发现原因：`define+name+参数 之后不能加";",也就是说，正确的代码应该是这样的：
 
 ```verilog
-　//`define+name+参数 　
-   `define 　　STATE_INIT　　  3'd0
-   `define 　　STATE_IDLE　 　 3'd1
-   `define 　　STATE_WRIT　　 3'd2
-   `define 　　STATE_READ　　3'd3
-   `define 　　STATE_WORK   3'd4
-   `define 　　STATE_RETU　　3'd5
+//`define+name+参数 　
+`define 　　STATE_INIT　　  3'd0
+`define 　　STATE_IDLE　 　 3'd1
+`define 　　STATE_WRIT　　 3'd2
+`define 　　STATE_READ　　3'd3
+`define 　　STATE_WORK   3'd4
+`define 　　STATE_RETU　　3'd5
 ```
 
 #### 7.之后就都正确了。
 
-### 总结：
+### 3、总结：
 
 - 1.`define+name+参数 之后不能加任何东西！
 - 2.写代码一定要细心，细致！
 - 3.当使用从未使用过的语句时，一定要先确定正确的用法！
 
-### 补充：
+### 4、补充：
 
 　　``define` 与localparam和parameter最大的区别就是  `define可以跨文件传递参数；parameter只能在模块间传递参数；而localparam只能在其所在的module中起作用，不能参与参数传递。
 
