@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head><meta charset="utf-8"/><meta content="IE=edge,chrome=1" http-equiv="x-ua-compatible"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Sswin" name="author"/><title>Ubuntu常见命令 ｜ SSWIN</title><meta content="" name="description"/><meta content="Hugo,theme,zozo" name="keywords"/><link href="https://zozo.sswin.site/images/favicon.ico" rel="shortcut icon"/><link href="https://zozo.sswin.site/css/normalize.css" media="screen" rel="stylesheet" type="text/css"/><link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" media="screen" rel="stylesheet" type="text/css"/><link href="https://zozo.sswin.site/css/zozo.css" media="screen" rel="stylesheet" type="text/css"/><link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" media="screen" rel="stylesheet" type="text/css"/><link href="https://zozo.sswin.site/css/highlight.css" media="screen" rel="stylesheet" type="text/css"/><script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+<link href="https://unpkg.com/@waline/client@v2/dist/waline.css" rel="stylesheet"/></head><body><div class="main animate__animated animate__fadeInDown"><div class="header animated fadeInDown"><div class="site_title_container"><div class="site_title"><a href="https://zozo.sswin.site/"><img alt="SSWIN" src="https://thispersondoesnotexist.com/image" width="100"/></a></div><div class="description"><p class="sub_title">放进时光蛋里。</p><div class="my_socials"><a href="mailto://me@sswin.site" target="_blank" title="mail"><i class="ri-mail-fill"></i></a>
+<a href="//sms:me@sswin.site" target="_blank" title="phone"><i class="ri-phone-fill"></i></a>
+<a href="//t.me/karl_s_bot" target="_blank" title="telegram"><i class="ri-telegram-fill"></i></a>
+<a href="https://zozo.sswin.site/index.xml" target="_blank" title="rss" type="application/rss+xml"><i class="ri-rss-fill"></i></a></div></div></div></div><div class="content"><div class="post_page"><div class="post animate__animated animate__fadeInDown"><div class="post_title post_detail_title"><h2><a href="/posts/16e43420/">Ubuntu常见命令</a></h2><span class="date">2022.11.14</span></div><div class="post_content markdown"><h2 id="换源">换源</h2><h3 id="配置方法">配置方法</h3><h4 id="修改源文件sourceslist">修改源文件sources.list</h4><p>（1）终端执行命令：<code>sudo chmod 777 /etc/apt/sources.list</code>更改文件权限使其可编辑；</p><p>（2）执行命令： <code>sudo gedit /etc/apt/sources.list</code> 打开文件进行编辑；</p><p>（3）删除原来的文件内容，根据系统版本复制下面的任意一个到其中并保存（常用的是阿里源和清华源，推荐阿里源）；</p><p>在 <code>/etc/apt/sources.list</code> 文件中，将软件源的地址改为 <code>https://mirrors.aliyun.com/ubuntu-ports/</code></p><p>以下是 Ubuntu 16.04 /etc/apt/sources.list 文件的参考配置内容：</p><div class="highlight"><pre class="chroma" tabindex="0"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span>
+</span></span><span class="line"><span class="cl">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+</span></span><span class="line"><span class="cl"><span class="c1"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse</span>
+</span></span><span class="line"><span class="cl">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+</span></span><span class="line"><span class="cl"><span class="c1"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse</span>
+</span></span><span class="line"><span class="cl">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+</span></span><span class="line"><span class="cl"><span class="c1"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse</span>
+</span></span><span class="line"><span class="cl">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+</span></span><span class="line"><span class="cl"><span class="c1"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 预发布软件源，不建议启用</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse</span>
+</span></span></code></pre></div><p>注：配置方法参考ustc镜像</p><h3 id="修改完软件源后更新软件列表和软件">修改完软件源后，更新软件列表和软件</h3><div class="highlight"><pre class="chroma" tabindex="0"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt upgrade
+</span></span></code></pre></div><h2 id="美化任务栏">美化任务栏</h2><p>Ubuntu 20.04 默认的任务栏在桌面左侧，不使用时会自动隐藏。安装 plank dock 工具可以在桌面底部设置一个常驻任务栏。</p><h3 id="安装与配置">安装与配置</h3><div class="highlight"><pre class="chroma" tabindex="0"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1">#安装</span>
+</span></span><span class="line"><span class="cl">sudo apt install plank
+</span></span><span class="line"><span class="cl"><span class="c1">#打开配置界面</span>
+</span></span><span class="line"><span class="cl">plank --preferences
+</span></span></code></pre></div><h2 id="安装方式">安装方式</h2><h3 id="从浏览器安装">从浏览器安装</h3><p><a href="https://extensions.gnome.org/">GNOME扩展网站</a></p><p>进入网站会有提示，要求安装浏览器扩展（Click here to install browser extension），点击安装即可
+刷新扩展网站页面，会提示安装本地扩展，使用命令安装即可</p><div class="highlight"><pre class="chroma" tabindex="0"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt install chrome-gnome-shell
+</span></span></code></pre></div><p>之后再次刷新页面，即可正常安装扩展</p><h3 id="手工安装">手工安装</h3><p>选择需要下载的插件，下载后解压，将解压后的目录移到</p><div class="highlight"><pre class="chroma" tabindex="0"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">~/.local/share/gnome-shell/extensions/ 
+</span></span></code></pre></div><p>没有该文件夹则新建一个</p><h3 id="安装gnome拓展">安装gnome拓展</h3><p>退出打开的gnome-tweaks</p><p>安装gnome-shell-extensions</p><div class="highlight"><pre class="chroma" tabindex="0"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt-get install gnome-shell-extensions
+</span></span></code></pre></div><p>然后重启gnome：按Alt + F2进入命令窗口，输入r，回车</p><h3 id="重新打开gnome-tweaks">重新打开gnome-tweaks</h3><div class="highlight"><pre class="chroma" tabindex="0"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">gnome-tweaks
+</span></span></code></pre></div><p>点击拓展选项，把User themes打开</p><h2 id="首先安装gedit-gmate">首先安装gedit-gmate</h2><p><code>sudo apt-add-repository ppa:ubuntu-on-rails/ppa</code> –添源加到源列表/etc/apt/sources.list中
+<code>sudo apt-get update</code> –更新源列表
+<code>sudo apt-get install gedit-gmate</code> –安装gedit-gmate
+Gmate不会删除Gedit的,他只是给Gedit添加很多插件而已,您可以在首选项里手动启用或者停止。
+2.括号补全、单词不全（这个挺有用的）、标记列表、代码注视等等插件。
+sudo apt-get install gedit-plugins –再安装一些插件
+3.安装Source Code Browser插件
+这个插件可以把程序中的函数、类、变量以列表的方式列出，对编程人员相当有用。
+之前在ubuntu-10.10上有用过Class Browser，但是这个插件在ubuntu-11.10上不能用，
+因为ubuntu-10.10上的是gedit2，ubuntu-11.10上的是gedit3。
+刚开始在ubuntu-11.10不懂怎么安装这个插件，找了很久才找到这个插件。
+gedit2的插件下载，http://live.gnome.org/Gedit/PluginsOld
+gedit3的插件下载，http://live.gnome.org/Gedit/Plugins –找到Source Code Browser
+也可直接从https://github.com/Quixotix/gedit-source-code-browser/downloads下载
+Quixotix-gedit-source-code-browser-v3[2].0.3-0-gb009544.tar.gz
+安装方法：
+apt-get install exuberant-ctags –安装ctags
+tar xzvf Quixotix-gedit-source-code-browser-v3[2].0.3-0-gb009544.tar.gz
+cd Quixotix-gedit-source-code-browser-b009544/
+cp sourcecodebrowser sourcecodebrowser.plugin /usr/lib/gedit/plugins/</p></div><div class="post_footer"></div></div><div id="waline"></div><script>Waline.init({el:"#waline",emoji:["//unpkg.com/@waline/emojis@1.0.1/weibo","//unpkg.com/@waline/emojis@1.0.1/bilibili","//unpkg.com/@waline/emojis@1.0.1/qq","//unpkg.com/@waline/emojis@1.0.1/tieba"],serverURL:"https://comment.sswin.xyz"})</script></div></div></div><a class="back_to_top" href="#" id="back_to_top"><i class="ri-arrow-up-s-line"></i></a><footer class="footer"><div class="powered_by"><a href="https://timegg.top">SSWIN © 2022 ,</a>
+<a href="http://www.gohugo.io/">Powered by Hugo.</a></div><div class="footer_slogan"><span>享受当下。</span></div></footer><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script><script src="https://zozo.sswin.site/js/jquery-3.5.1.min.js"></script>
+<link href="https://zozo.sswin.site/css/fancybox.min.css" rel="stylesheet"/><script src="https://zozo.sswin.site/js/fancybox.min.js"></script>
+<script src="https://zozo.sswin.site/js/zozo.js"></script>
+<script type="application/javascript">var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-3XR6QD9MQ2","auto"),ga("send","pageview"))</script><script async="" src="https://www.google-analytics.com/analytics.js"></script></body></html>
