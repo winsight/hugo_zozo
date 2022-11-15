@@ -178,5 +178,43 @@ sudo apt-get autoclean
 sudo apt-get clean
 ```
 
+## [Gnome桌面环境安装_书启秋枫的博客-CSDN博客_gnome桌面](https://blog.csdn.net/qq_45037155/article/details/123387923)
+
+> 1.图形界面：
+>
+> 1）命令：sudo gedit /etc/default/grub
+>
+> 2）去掉 #GRUB_TERMINAL=console 的注释，即GRUB_TERMINAL=console 
+>
+> 3）输入命令：
+>
+>         sudo update-grub（重新生成GRUB的启动菜单配置文件）
+>     
+>         sudo systemctl set-default multi-user.target 
+>
+> 4）sudo reboot（重启系统，进入命令方式）
+>
+> 2.字符界面：
+>
+> 1）sudo nano /etc/default/grub （更改回原来的设置）
+>
+> 2）加上 #GRUB_TERMINAL=console 的注释，即#GRUB_TERMINAL=console
+>
+> 3）输入命令：
+>
+>         sudo update-grub（重新生成GRUB的启动菜单配置文件）
+>     
+>         sudo systemctl set-default graphical.target 
+>
+> 4）重启 sudo reboot(进入桌面图形模式）
+>
+>  3.Unity：最左侧部分是一条纵向的快速启动条，即Launcher。快速启动条上的图标有三类：系统强制放置的功能图标（Dash 主页（应用管理和文件管理）、工作区切换器和回收站），用户自定义放置的常用程序图标，以及正在运行的应用程序图标。
+>
+> 4.Gnome：在桌面环境中，鼠标的基本操作和windows相同。鼠标的基本操作包括单击、双击和右击。窗口的基本操作包括最大化、最小化、移动、置顶和调整窗口大小和位置等。
+
+
+
+
+
 
 
