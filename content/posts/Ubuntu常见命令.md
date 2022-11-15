@@ -116,30 +116,50 @@ gnome-tweaks
 
 点击拓展选项，把User themes打开
 
-## 首先安装gedit-gmate
+## 安装gedit-gmate
 
-`sudo apt-add-repository ppa:ubuntu-on-rails/ppa` --添源加到源列表/etc/apt/sources.list中
-`sudo apt-get update` --更新源列表
-`sudo apt-get install gedit-gmate` --安装gedit-gmate
+```bash
+sudo apt-add-repository ppa:ubuntu-on-rails/ppa 
+#添源加到源列表 /etc/apt/sources.list中
+sudo apt-get update 
+#更新源列表
+sudo apt-get install gedit-gmate 
+#安装gedit-gmate
+```
+
 Gmate不会删除Gedit的,他只是给Gedit添加很多插件而已,您可以在首选项里手动启用或者停止。
-2.括号补全、单词不全（这个挺有用的）、标记列表、代码注视等等插件。
-sudo apt-get install gedit-plugins --再安装一些插件
-3.安装Source Code Browser插件
-这个插件可以把程序中的函数、类、变量以列表的方式列出，对编程人员相当有用。
-之前在ubuntu-10.10上有用过Class Browser，但是这个插件在ubuntu-11.10上不能用，
-因为ubuntu-10.10上的是gedit2，ubuntu-11.10上的是gedit3。
-刚开始在ubuntu-11.10不懂怎么安装这个插件，找了很久才找到这个插件。
-gedit2的插件下载，http://live.gnome.org/Gedit/PluginsOld
-gedit3的插件下载，http://live.gnome.org/Gedit/Plugins --找到Source Code Browser
-也可直接从https://github.com/Quixotix/gedit-source-code-browser/downloads下载
-Quixotix-gedit-source-code-browser-v3[2].0.3-0-gb009544.tar.gz
-安装方法：
-apt-get install exuberant-ctags --安装ctags
-tar xzvf Quixotix-gedit-source-code-browser-v3[2].0.3-0-gb009544.tar.gz
-cd Quixotix-gedit-source-code-browser-b009544/
-cp sourcecodebrowser sourcecodebrowser.plugin /usr/lib/gedit/plugins/
 
+- 括号补全、单词不全（这个挺有用的）、标记列表、代码注视等等插件。
 
+  ```bash
+  sudo apt-get install gedit-plugins --再安装一些插件
+  ```
+
+- 安装Source Code Browser插件
+  这个插件可以把程序中的函数、类、变量以列表的方式列出，对编程人员相当有用。
+  之前在ubuntu-10.10上有用过Class Browser，但是这个插件在ubuntu-11.10上不能用，
+  因为ubuntu-10.10上的是gedit2，ubuntu-11.10上的是gedit3。
+  刚开始在ubuntu-11.10不懂怎么安装这个插件，找了很久才找到这个插件。
+  gedit2的插件下载，http://live.gnome.org/Gedit/PluginsOld
+  gedit3的插件下载，http://live.gnome.org/Gedit/Plugins --找到Source Code Browser
+  也可直接从https://github.com/Quixotix/gedit-source-code-browser/downloads下载
+  Quixotix-gedit-source-code-browser-v3[2].0.3-0-gb009544.tar.gz
+  安装方法：
+
+  ```bash
+  apt-get install exuberant-ctags --安装ctags
+  tar xzvf Quixotix-gedit-source-code-browser-v3[2].0.3-0-gb009544.tar.gz
+  cd Quixotix-gedit-source-code-browser-b009544/
+  cp sourcecodebrowser sourcecodebrowser.plugin /usr/lib/gedit/plugins/
+  ```
+
+## 在其中输入以下的命令进行桌面注销。
+
+```bash
+sudo systemctl  restart  lightdm
+# 或者
+sudo pkill  Xorg
+```
 
 
 
