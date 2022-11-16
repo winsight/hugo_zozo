@@ -22,13 +22,23 @@ math: false
 
 #### 修改源文件sources.list
 
-（1）终端执行命令：`sudo chmod 777 /etc/apt/sources.list`更改文件权限使其可编辑；
+（1）终端执行命令：
 
-（2）执行命令： `sudo gedit  /etc/apt/sources.list` 打开文件进行编辑；
+```sh
+sudo chmod 777 /etc/apt/sources.list
+#更改文件权限使其可编辑；
+```
+
+（2）执行命令： 
+
+```
+sudo gedit  /etc/apt/sources.list
+#打开文件进行编辑；
+```
 
 （3）删除原来的文件内容，根据系统版本复制下面的任意一个到其中并保存（常用的是阿里源和清华源，推荐阿里源）；
 
-在 `/etc/apt/sources.list` 文件中，将软件源的地址改为 `https://mirrors.aliyun.com/ubuntu-ports/`
+在/etc/apt/sources.list 文件中，将软件源的地址改为 https://mirrors.aliyun.com/ubuntu-ports/
 
 以下是 Ubuntu 16.04 /etc/apt/sources.list 文件的参考配置内容：
 
@@ -189,7 +199,7 @@ sudo apt-get clean
 > 3）输入命令：
 >
 >         sudo update-grub（重新生成GRUB的启动菜单配置文件）
->     
+>         
 >         sudo systemctl set-default multi-user.target 
 >
 > 4）sudo reboot（重启系统，进入命令方式）
@@ -203,7 +213,7 @@ sudo apt-get clean
 > 3）输入命令：
 >
 >         sudo update-grub（重新生成GRUB的启动菜单配置文件）
->     
+>         
 >         sudo systemctl set-default graphical.target 
 >
 > 4）重启 sudo reboot(进入桌面图形模式）
@@ -212,9 +222,13 @@ sudo apt-get clean
 >
 > 4.Gnome：在桌面环境中，鼠标的基本操作和windows相同。鼠标的基本操作包括单击、双击和右击。窗口的基本操作包括最大化、最小化、移动、置顶和调整窗口大小和位置等。
 
+**使用另外一个命令安装 \**gome\****
 
-
-
+> ```
+> sudo apt install ubuntu-gnome-desktop
+> ```
+>
+> ## [Ubuntu系统桌面任务栏和启动器全部消失解决方案](https://www.bbsmax.com/A/8Bz8bZ8O5x/)
 
 
 
