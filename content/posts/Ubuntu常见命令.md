@@ -199,7 +199,7 @@ sudo apt-get clean
 > 3）输入命令：
 >
 >         sudo update-grub（重新生成GRUB的启动菜单配置文件）
->         
+>                 
 >         sudo systemctl set-default multi-user.target 
 >
 > 4）sudo reboot（重启系统，进入命令方式）
@@ -213,7 +213,7 @@ sudo apt-get clean
 > 3）输入命令：
 >
 >         sudo update-grub（重新生成GRUB的启动菜单配置文件）
->         
+>                 
 >         sudo systemctl set-default graphical.target 
 >
 > 4）重启 sudo reboot(进入桌面图形模式）
@@ -228,7 +228,31 @@ sudo apt-get clean
 > sudo apt install ubuntu-gnome-desktop
 > ```
 >
-> ## [Ubuntu系统桌面任务栏和启动器全部消失解决方案](https://www.bbsmax.com/A/8Bz8bZ8O5x/)
 
+## [Ubuntu系统桌面任务栏和启动器全部消失解决方案](https://www.bbsmax.com/A/8Bz8bZ8O5x/)
 
+### 解决办法：
 
+Ctrl+Alt+F1 进入命令行，输入:
+
+```
+sudo service lightdm restart 重启lightdm
+```
+
+如果不行的话就重装Unity，依次输入：
+
+```
+sudo apt-get update
+sudo apt-get install --reinstall ubuntu-desktop   
+# 如果有依赖导致安装不成功使用 
+sudo aptitude install ubuntu-desktop
+```
+
+```
+sudo apt-get install unity                   
+#如果有依赖导致安装不成功使用 
+sudo aptitude install unity
+#第一种解决方案不成功选则n，使用第二种解决方案
+```
+
+##  [ubuntu中快速安装on-my-zsh](https://blog.csdn.net/qq_43606857/article/details/125060969)
