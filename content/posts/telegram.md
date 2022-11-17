@@ -49,6 +49,10 @@ math: false
 
 - winsight:`-1001652194128`
 
+- sync同步资源wins:`-1001635320642`
+
+- sync同步资源win: `-1001550252035`
+
 
 
 ## 用户ID
@@ -97,7 +101,13 @@ https://api.telegram.org/bot5356381291:AAEkvgZGLpPKVFBwqVeR0EukGglYYcDFWVI/sendM
 
 ## 获取ID方法
 
-https://api.telegram.org/bot1470869905:AAG51JILCVRl15AJIDtrFwB9eWHq18pEQPQ/getUpdates
+<div align="center">
+  <a href="https://api.telegram.org/bot5356381291:AAEkvgZGLpPKVFBwqVeR0EukGglYYcDFWVI/getUpdates">通过美羊羊获取</a>
+</div>
+
+
+
+https://api.telegram.org/bot'BotAPI'/getUpdates
 
 
 
