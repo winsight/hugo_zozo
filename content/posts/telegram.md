@@ -1,5 +1,5 @@
 ---
-title: "TeleAPI&ID"
+title: "Telegram API&ID"
 date: 2022-11-17T15:54:03+08:00
 slug: "59725748"
 hidden: false
