@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head><meta charset="utf-8"/><meta content="MlCbTFwi8qVmMCmDnlISOYdFqFcBTIA3hdWJIev8ljg" name="google-site-verification"/><meta content="IE=edge,chrome=1" http-equiv="x-ua-compatible"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Sswin" name="author"/><title>Mac M1能否使用GHDL+GTKWave跑VHDL ｜ SSWIN</title><meta content="可以替代一部分功能。" name="description"/><meta content="VHDL,技术,转载" name="keywords"/><link href="https://zozo.sswin.site/images/favicon.ico" rel="shortcut icon"/><link href="https://zozo.sswin.site/css/normalize.css" media="screen" rel="stylesheet" type="text/css"/><link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" media="screen" rel="stylesheet" type="text/css"/><link href="https://zozo.sswin.site/css/zozo.css" media="screen" rel="stylesheet" type="text/css"/><link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" media="screen" rel="stylesheet" type="text/css"/><link href="https://zozo.sswin.site/css/highlight.css" media="screen" rel="stylesheet" type="text/css"/><script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+<link href="https://unpkg.com/@waline/client@v2/dist/waline.css" rel="stylesheet"/></head><body><div class="main animate__animated animate__fadeInDown"><div class="header animated fadeInDown"><div class="site_title_container"><div class="site_title"><a href="https://zozo.sswin.site/"><img alt="SSWIN" src="https://thispersondoesnotexist.com/image" width="100"/></a></div><div class="description"><p class="sub_title">放进时光蛋里。</p><div class="my_socials"><a href="mailto://me@sswin.site" target="_blank" title="mail"><i class="ri-mail-fill"></i></a>
+<a href="//sms:me@sswin.site" target="_blank" title="phone"><i class="ri-phone-fill"></i></a>
+<a href="//t.me/karl_s_bot" target="_blank" title="telegram"><i class="ri-telegram-fill"></i></a>
+<a href="https://zozo.sswin.site/index.xml" target="_blank" title="rss" type="application/rss+xml"><i class="ri-rss-fill"></i></a></div></div></div></div><div class="content"><div class="post_page"><div class="post animate__animated animate__fadeInDown"><div class="post_title post_detail_title"><h2><a href="/post/4540f940/">Mac M1能否使用GHDL+GTKWave跑VHDL</a></h2><span class="date">2022.11.26</span></div><div class="post_content markdown"><h2 id="先给出答案">先给出答案</h2><p>可以替代一部分功能</p><ul><li>如果你是一个学工科的学生，正在学习EDA。<ul><li>你也许还需要诸如“立创EDA”这样的设计软件辅助，因为你们可能还需要用原理图仿真</li><li>麻烦的地方还有就是需要自己编写testbench，不能由波形文件直接生成，但我感觉<a href="https://ghdl.readthedocs.io/en/latest/development/Roadmap.html">未来发展</a>还是有希望有更便捷的图形仿真界面的</li></ul></li><li>如果你只是想学习VHDL语言，那么GHDL+GTKWave其实也是可以的，GDHL相信也会越来越强大</li></ul><h2 id="为什么需要替代">为什么需要替代</h2><ul><li>Quartus ii 占空间大（Quartus ii：好几G；GHDL+GTKWave：40M左右)</li><li>Quartus ii 下载需要破译</li><li>Quartus ii 编译慢（相比于GHDL慢很多，用过的人都懂）</li><li>Quartus ii 只能在Windows系统下运行</li></ul><p>也有博主做过相关吐槽https://www.xuebuyuan.com/1786786.html</p><h2 id="windows下用ghdlgtkwave代替quartus-ii">Windows下用GHDL+GTKWave代替Quartus ii</h2><p><a href="https://www.bilibili.com/video/av77054717">https://www.bilibili.com/video/av77054717</a></p><h2 id="linux下用ghdlgtkwave代替quartus-ii">Linux下用GHDL+GTKWave代替Quartus ii</h2><p><a href="https://www.xuebuyuan.com/1786786.html">https://www.xuebuyuan.com/1786786.html</a></p><h2 id="mac下用ghdlgtkwave代替quartus-ii">Mac下用GHDL+GTKWave代替Quartus ii</h2><p>因为主要想要介绍的是Mac系统下的，其它两个系统给大家推荐一下教程就不赘述了。如果推荐的方法过时了，可以具体的可以看一下GHDL的官方文档https://ghdl.readthedocs.io/en/latest/。或者在底下留言，一同探讨。</p><h3 id="一安装ghdl">一、安装GHDL</h3><p>在macOS High Sierra系统 10.13.6下，我安装了GCC9.0.2_1后好像就自动有了GHDL。</p><p>我删除GCC后却依旧可以使用GHDL，我不知道他是不是来自GCC更低的版本，或者是来自Xcode工具，亦或者是mac系统自带的。</p><p>为了解决这个疑惑，我去翻阅了<a href="https://ghdl.readthedocs.io/en/latest/getting/GCC.html">GCC的官方文档</a>，但是依旧未能解决疑惑。有正解的小伙伴可以在评论提供一下。我只能根据查到的一些蛛丝马迹估计是来自Xcode工具，如果你下载了Xcode并安装了GCC依旧无法使用GHDL的话。那么请看一下mcode的版本，也需要有GCC，安装也是非常方便，就是国内下载github上面的东西大家也懂的，好在文件不大。</p><p>我们从<a href="https://ghdl.readthedocs.io/en/latest/getting/Releases.html">GHDL官网</a>提供的链接下载mcode版本的GHDL，<a href="https://github.com/ghdl/ghdl/releases/download/v0.37/ghdl-0.37-macosx-mcode.tgz%E3%80%82">https://github.com/ghdl/ghdl/releases/download/v0.37/ghdl-0.37-macosx-mcode.tgz。</a></p><p>其它系统可以看这里：</p><p>![屏幕快照 2020-05-02 上午9.46.07](/Users/wangshuai/GitHub repo/Blog/zozo_hugo/content/post/4540f940/uiWyqNN.png)</p><p>解压后随便存个地方，设置一下环境变量就可以使用了。</p><p>设置环境变量可以修改~/.bash_profile，方法如下：</p><pre><code>$ vim ~/.bash_profile
+</code></pre><p>将下面这段文本添加进去，注意替换&lt;解压文件存放的目录&gt;和修改版本号：</p><pre><code>PATH="&lt;解压文件存放的目录&gt;/ghdl-0.37-macosx-mcode/bin:${PATH}"
+export PATH
+</code></pre><p>让修改生效：</p><pre><code>$ source ~/.bash_profile
+</code></pre><p>由于之前已经安装GHDL了，我给新的GHDL起名ghdlm以做区分。如果操作成功，在命令行输入指令可以看到：</p><pre><code>$ ghdlm # 新安装的
+ghdlm:error: missing command, try ghdlm --help
+$ ghdl # 之前的
+ghdl: missing command, try ghdl --help
+</code></pre><p>如果你在source那一步遇到问题，那重启电脑就好了。</p><h3 id="二安装gtkwave">二、安装GTKWave</h3><pre><code>$ brew cask install gtkwave
+</code></pre><p>请不要忽略cask。</p><p>最后安装好的文件会在Application里，但我们不需要主动打开它。</p><h3 id="三ghdl配合gtkwave的使用">三、GHDL配合GTKWave的使用</h3><p>我们先做一个简单的样例，就比如半加器吧。</p><p>先编写我们的vhd文件，我们这里需要两个文件，如果学过Quartus ii的话应该会清楚，我们需要一个vhd文件和一个波形文件。在这里，我们将用另一个vhd来代替波形文件。</p><h4 id="1-编写">1. 编写</h4><p>首先，编写半加器的文件，命名为half_adder.vhd，命名是需要格外注意的问题：</p><pre><code>library ieee;
+use ieee.std_logic_1164.all;
+
+entity HALF_ADDER is
+port(	
+  A:	in std_logic;
+	B:	in std_logic;
+	CO:	out std_logic;
+	SO:	out std_logic
+);
+
+end HALF_ADDER;
+
+architecture behv of HALF_ADDER is
+ 
+begin	
+    SO &lt;= A xor B;
+    CO &lt;= A and B;
+
+end behv;
+</code></pre><p>接着，编写半加器的testbench文件，命名为half_adder_tb.vhd，这可能需要掌握一些元件例化的知识：</p><pre><code>library ieee;
+use ieee.std_logic_1164.all;
+
+entity HALF_ADDER_TB is
+end HALF_ADDER_TB;
+  
+architecture tbbehv of HALF_ADDER_TB is
+  
+  component HALF_ADDER
+  	port(	
+      A:	in std_logic;
+      B:	in std_logic;
+      CO:	out std_logic;
+      SO:	out std_logic
+    );
+  end component;
+  
+ 	signal A,B :std_logic := '0';
+  signal CO,SO :std_logic;
+  
+begin	
+  u1: HALF_ADDER port map(A,B,CO,SO);
+  input: process
+    begin
+      A&lt;='0';B&lt;='0';
+			wait for 20 ns;
+      A&lt;='0';B&lt;='1';
+      wait for 20 ns;
+      A&lt;='1';B&lt;='0';
+      wait for 20 ns;
+      A&lt;='1';B&lt;='1';
+      wait for 20 ns;
+      wait;
+    end process;
+end tbbehv;
+</code></pre><p>由于注释可能会报错，在此就不加了，但是学过元件例化应该不难理解，如果有困难可以百度“VHDL TESTBENCH”，有很多教程。</p><h4 id="2-编译">2. 编译</h4><p>然后我们需要先编译half_adder.vhd和half_adder_tb.vhd两个文件</p><pre><code>$ ghdl -a half_adder.vhd
+$ ghdl -a half_adder_tb.vhd
+</code></pre><p>然后由half_adder_tb生成可执行文件</p><pre><code>$ ghdl -e half_adder_tb
+</code></pre><h4 id="3-生成波形文件">3. 生成波形文件</h4><pre><code>$ ghdl -r half_adder_tb --vcd=a.vcd
+</code></pre><p>名字可以随便起，不一定是a.vcd，但是要有后缀名，为了GTKWave打得开。</p><p>我们先修改一下.vcd文件的默认打开方式为GTKWave，以后就可以双击直接打开。</p><p>这时候就可以看到波形了（注意先点击half_adder_tb，再把左下角信号拖进Signals那一栏，并且用放大镜缩放视图到合适的位置）：</p><p>![屏幕快照 2020-05-02 下午3.31.40](/Users/wangshuai/GitHub repo/Blog/zozo_hugo/content/post/4540f940/wALT1js.png)</p><p>GTKWave的功能还是很强大的，大家还可以摸索一下。</p><h3 id="四便捷的方法">四、便捷的方法</h3><p>不知道看到这一步之前是否就有被劝退的呢？</p><p>被麻烦的命令行操作，还是复杂的testbench文件。</p><p>但其实我想说，既然是命令行操作，为什么不用一个shell脚本或者一个python脚本来搞定呢？testbench也可以结合自己的使用习惯生成，或者输入波形来生成。</p><pre><code>__--__--__--__--
+____----____----
+</code></pre><p>我们来一个简约版的：</p><pre><code>echo -e "\033[32m第一次使用会安装必备的依赖，请稍等片刻\033[0m";
+info=`which ghdl`;
+
+if [ -z "$info" ]; then
+    echo -e "1";
+else 
+    echo -e "ghdl is installed";
+fi
+if [ ! -d "/Applications/gtkwave.app/" ]; then
+    echo -e "installing gtkwave";
+    brew cask install gtkwave;
+else 
+    echo -e "gtkwave is installed";
+fi
+
+if [ -z "$1" ]; then
+    echo -e "gvhdl: missing command, try gvhdl --help"
+elif [ -z "$2" ]; then
+    ghdl -a "$1".vhd;
+    ghdl -e "$1";
+    ghdl -r "$1" --vcd=a.vcd;
+    rm e~"$1".o;
+    rm "$1".o;
+    rm work-obj*;
+    rm "$1".o;
+else
+    ghdl -a "$2".vhd;
+    ghdl -a "$1".vhd;
+    ghdl -e "$2";
+    ghdl -r "$2" --vcd=a.vcd;
+    rm e~"$2".o;
+    rm "$2".o;
+    rm "$2";
+    rm "$1".o;
+    rm work-obj*;
+fi
+</code></pre><p>由于版本可能不一样，我在这里给个样例，大家参考即可。另外也没有编写生成testbench的部分，如果有感兴趣的，可以留评论哦。</p><p>以后我会在博客园多更一些与Mac系统使用相关的，和Web开发相关的，希望可以和大家一起探讨学习。</p></div><div class="post_footer"><div class="meta"><div class="info"><span class="field tags"><i class="ri-stack-line"></i>
+<a href="https://zozo.sswin.site/tags/vhdl/">VHDL</a>
+<a href="https://zozo.sswin.site/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+<a href="https://zozo.sswin.site/tags/%E8%BD%AC%E8%BD%BD/">转载</a></span></div></div></div></div><div id="waline"></div><script>Waline.init({el:"#waline",emoji:["//unpkg.com/@waline/emojis@1.0.1/weibo","//unpkg.com/@waline/emojis@1.0.1/bilibili","//unpkg.com/@waline/emojis@1.0.1/qq","//unpkg.com/@waline/emojis@1.0.1/tieba"],serverURL:"https://comment.sswin.xyz"})</script></div></div></div><a class="back_to_top" href="#" id="back_to_top"><i class="ri-arrow-up-s-line"></i></a><footer class="footer"><div class="powered_by"><a href="https://timegg.top">SSWIN © 2022 ,</a>
+<a href="http://www.gohugo.io/">Powered by Hugo.</a></div><div class="footer_slogan"><span>享受当下。</span></div></footer><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script><script src="https://zozo.sswin.site/js/jquery-3.5.1.min.js"></script>
+<link href="https://zozo.sswin.site/css/fancybox.min.css" rel="stylesheet"/><script src="https://zozo.sswin.site/js/fancybox.min.js"></script>
+<script src="https://zozo.sswin.site/js/zozo.js"></script>
+<script type="application/javascript">var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-3XR6QD9MQ2","auto"),ga("send","pageview"))</script><script async="" src="https://www.google-analytics.com/analytics.js"></script></body></html>
