@@ -57,15 +57,18 @@ pygmentscodefencesguesssyntax = true
   Navbar = true
   Comments = true
   hugoEncryptorLanguage = "zh-cn"     # within ["zh-cn", "zh-cn"]
-
+  googleAnalytics = "G-NK7MGJ5TNJ" # your google analytics id       # Google统计代码
   
 # waline.
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://waline.js.org/guide/get-started.html
 [params.waline]
-  enable = true
+  enable = false
   Url = "https://comment.sswin.xyz"
-  
+[params.gitalk]
+  enable = true
+  ClientSecret = "ed7ccda91c80d51e2bfd7e0b1dcbf52d9f0232cc"
+
 
 # Your socail's url
 # 社交地址配置
