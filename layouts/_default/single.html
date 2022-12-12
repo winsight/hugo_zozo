@@ -37,6 +37,8 @@
                 {{ partial "waline.html" . }}
                 {{ else if .Site.Params.gitalk.enable}}
                 {{ partial "gitalk.html" . }}
+                {{ else if .Site.Params.giscus.enable}}
+                {{ partial "giscus.html" . }}
                 {{ else }}
                 <div class="doc_comments">{{ template "_internal/disqus.html" . }}</div>
                 {{ end }}

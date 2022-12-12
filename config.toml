@@ -65,8 +65,11 @@ pygmentscodefencesguesssyntax = true
   enable = false
   Url = "https://comment.sswin.xyz"
 [params.gitalk]
-  enable = true
+  enable = false
   ClientSecret = "ed7ccda91c80d51e2bfd7e0b1dcbf52d9f0232cc"
+[params.giscus]
+  enable = true
+  datarepo = "winsight/hugo_zozo_comment"
 
 
 # Your socail's url
