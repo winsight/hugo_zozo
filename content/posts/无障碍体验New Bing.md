@@ -68,15 +68,15 @@ math: false
 
 1. web.html
 
-   ![snap1](snap1.png)
+   ![image-20230407183153708](tqVG4A5.png)
 
 2. web2.html
 
-   ![snap2](snap2.png)
+   ![image-20230407183331624](qo9HLSJ.png)
 
 3. web3/html/index.html 
 
-   ![snap3](snap3.png)
+   ![image-20230407183417848](9Yc1sq4.png)
 
 ## 实例体验
 
@@ -85,13 +85,13 @@ math: false
 2. 嵌入页面:
 <iframe src="http://chat.sswin.xyz/web.html" width="100%" height="500px"></iframe>
 
-<iframe src="http://chat.sswin.xyz/webchat.html" width="100%" height="500px"></iframe>
+<iframe src="http://chat.sswin.xyz/webchat.html" width="100%" height="600px"></iframe>
 
 <iframe src="http://chat.sswin.xyz/web3/html/index.html " width="100%" height="500px"></iframe>
 
 ## 参考
 
-[huwei901108/Bing-Chat: Bing Chat服务端,通过WebSocket/API实现通讯. (github.com)](https://github.com/huwei901108/Bing-Chat)
+[Bing-Chat](https://github.com/huwei901108/Bing-Chat)
 
 [NewBing访问](https://www.bilibili.com/read/cv22505800)
 
