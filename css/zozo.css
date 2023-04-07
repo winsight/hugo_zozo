@@ -615,7 +615,8 @@ table {
   border-bottom: 1px solid #a8aeb2;
   text-align: center;
   width: 100%;
-  overflow: auto;
+  overflow-x: auto;
+  /*overflow-x: auto;*/
 }
 
 table th {
