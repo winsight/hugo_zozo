@@ -80,14 +80,9 @@ math: false
 
 ## 实例体验
 
-1. [Bing Chat](http://chat.sswin.xyz/d9a7ee0ecd10498e94ae5c847784653e.html)
+1. [Bing Chat](http://demo.sswin.xyz/)
 
-2. 嵌入页面:
-<iframe src="http://chat.sswin.xyz/web.html" width="100%" height="500px"></iframe>
-
-<iframe src="http://chat.sswin.xyz/webchat.html" width="100%" height="600px"></iframe>
-
-<iframe src="http://chat.sswin.xyz/web3/html/index.html " width="100%" height="500px"></iframe>
+<iframe src="http://demo.sswin.xyz/" width="100%" height="500px"></iframe>
 
 ## 参考
 
