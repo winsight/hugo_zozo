@@ -7,7 +7,7 @@ tags: ["verilog","学习"]
 keywords: ["verilog","学习"]
 description: ""
 Summary: ""
-Navbar: false
+Navbar: true
 comments: true
 math: false
 ---

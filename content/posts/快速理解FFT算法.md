@@ -7,7 +7,7 @@ tags: ["数学"]
 keywords: []
 description: ""
 Summary: ""
-Navbar: false
+Navbar: true
 comments: true
 math: true
 ---

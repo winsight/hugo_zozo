@@ -7,7 +7,7 @@ tags: []
 keywords: []
 description: ""
 Summary: ""
-Navbar: false
+Navbar: true
 comments: true
 math: false
 ---
@@ -199,7 +199,7 @@ sudo apt-get clean
 > 3）输入命令：
 >
 >         sudo update-grub（重新生成GRUB的启动菜单配置文件）
->                 
+>                     
 >         sudo systemctl set-default multi-user.target 
 >
 > 4）sudo reboot（重启系统，进入命令方式）
@@ -213,7 +213,7 @@ sudo apt-get clean
 > 3）输入命令：
 >
 >         sudo update-grub（重新生成GRUB的启动菜单配置文件）
->                 
+>                     
 >         sudo systemctl set-default graphical.target 
 >
 > 4）重启 sudo reboot(进入桌面图形模式）

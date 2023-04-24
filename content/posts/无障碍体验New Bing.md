@@ -7,7 +7,7 @@ tags: []
 keywords: []
 description: "NewBing访问，配置一台主机供多设备（包括手机）连接，无需科学上网，简单写个分享"
 Summary: ""
-Navbar: false
+Navbar: true
 comments: true
 math: false
 ---
