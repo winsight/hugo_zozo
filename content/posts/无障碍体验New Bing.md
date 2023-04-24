@@ -82,7 +82,7 @@ math: false
 
 1. [Bing Chat](http://demo.sswin.xyz/)
 
-<iframe src="http://demo.sswin.xyz/" width="100%" height="500px"></iframe>
+<iframe src="http://demo.wssss.one/" width="100%" height="500px"></iframe>
 
 ## 参考
 
