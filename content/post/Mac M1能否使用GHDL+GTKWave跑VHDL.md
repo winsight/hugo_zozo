@@ -63,7 +63,7 @@ Mac下用GHDL+GTKWave代替Quartus ii
 
 其它系统可以看这里：
 
-![屏幕快照 2020-05-02 上午9.46.07](/Users/wangshuai/GitHub repo/Blog/zozo_hugo/content/post/4540f940/uiWyqNN.png)
+![](uiWyqNN.png)
 
 解压后随便存个地方，设置一下环境变量就可以使用了。
 
@@ -199,7 +199,7 @@ Mac下用GHDL+GTKWave代替Quartus ii
 
 这时候就可以看到波形了（注意先点击half\_adder\_tb，再把左下角信号拖进Signals那一栏，并且用放大镜缩放视图到合适的位置）：
 
-![屏幕快照 2020-05-02 下午3.31.40](/Users/wangshuai/GitHub repo/Blog/zozo_hugo/content/post/4540f940/wALT1js.png)
+![屏幕快照 2020-05-02 下午3.31.40](wALT1js.png)
 
 GTKWave的功能还是很强大的，大家还可以摸索一下。
 
