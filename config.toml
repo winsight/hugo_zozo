@@ -1,4 +1,4 @@
-baseURL = "https://zozo.sswin.site/"
+baseURL = "https://zozo.wssss.one/"
 languageCode = "zh-cn"
 defaultContentLanguage = "zh-cn"
 title = "SSWIN"                        # site title                     # 网站标题
@@ -38,7 +38,7 @@ pygmentscodefencesguesssyntax = true
   name = "链接"
   weight = 30
   identifier = "links"
-  url = "https://blogroll.sswin.site/"
+  url = "https://blogroll.wssss.one/"
 [[menu.main]]
   name = "关于"
   weight = 40
@@ -81,7 +81,7 @@ pygmentscodefencesguesssyntax = true
   # weibo = " "
   # instagram = " 1"
   Phone = "http://sms%3A%2F%2F18336983040"
-  mail = "mailto://me@sswin.site"
+  mail = "mailto://me@wssss.one"
   telegram = "//t.me/karl_s_bot"
   
 
