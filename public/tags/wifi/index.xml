@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WIFI on SSWIN</title>
+    <link>https://zozo.sswin.site/tags/wifi/</link>
+    <description>Recent content in WIFI on SSWIN</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 31 Aug 2022 15:42:45 +0800</lastBuildDate><atom:link href="https://zozo.sswin.site/tags/wifi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>破解Wi-Fi密码</title>
+      <link>https://zozo.sswin.site/posts/a2a5cc7c/</link>
+      <pubDate>Wed, 31 Aug 2022 15:42:45 +0800</pubDate>
+      
+      <guid>https://zozo.sswin.site/posts/a2a5cc7c/</guid>
+      <description>&lt;p&gt;暴力破解WI-FI密码，还未成功过。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

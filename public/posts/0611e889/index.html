@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3XR6QD9MQ2"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-3XR6QD9MQ2');
+    </script>
+<meta charset="utf-8"/>
+<meta content="MlCbTFwi8qVmMCmDnlISOYdFqFcBTIA3hdWJIev8ljg" name="google-site-verification"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Sswin" name="author"/>
+<title>Latex公式识别OCR「mathpix的开源平替」 ｜ SSWIN</title>
+<meta content="" name="description"/>
+<meta content="Hugo, theme, zozo" name="keywords"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="/posts/0611e889/" name="twitter:site"/>
+<meta content="Latex公式识别OCR「mathpix的开源平替」" name="twitter:creator"/>
+<meta content="Latex公式识别OCR「mathpix的开源平替」" name="twitter:title"/>
+<meta content="" name="twitter:description"/>
+<meta content="https://zozo.sswin.site//images/favicon.ico" name="twitter:image"/>
+<meta content="Latex公式识别OCR「mathpix的开源平替」" property="og:title"/>
+<meta content="/posts/0611e889/" property="og:url"/>
+<meta content="https://zozo.sswin.site//images/favicon.ico" property="og:image"/>
+<meta content="" name="og:description"/>
+<meta content="Latex公式识别OCR「mathpix的开源平替」" property="og:site_name"/>
+<meta content="article" property="og:type"/>
+<meta content="" property="og:article:author"/>
+<link href="https://zozo.sswin.site//images/favicon.ico" rel="shortcut icon"/>
+<link href="https://zozo.sswin.site/css/normalize.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="https://zozo.sswin.site/css/zozo.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="https://zozo.sswin.site/css/highlight.css" media="screen" rel="stylesheet" type="text/css"/>
+<script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+<link href="https://unpkg.com/@waline/client@v2/dist/waline.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="main animate__animated animate__fadeInDown">
+<div class="nav_container animated fadeInDown">
+<div class="site_nav" id="site_nav">
+<ul>
+<li>
+<a href="/">主页</a>
+</li>
+<li>
+<a href="/posts/">归档</a>
+</li>
+<li>
+<a href="/tags/">标签</a>
+</li>
+<li>
+<a href="https://blogroll.sswin.site/">链接</a>
+</li>
+<li>
+<a href="/about/">关于</a>
+</li>
+</ul>
+</div>
+<div class="menu_icon">
+<a id="menu_icon"><i class="ri-menu-line"></i></a>
+</div>
+</div>
+<div class="header animated fadeInDown">
+<div class="site_title_container">
+<div class="site_title">
+<a href="https://zozo.sswin.site/">
+<img alt="SSWIN" src="https://zozo.sswin.site//images/favicon.ico" style="border-radius:50px;width:100;"/>
+</a>
+</div>
+<div class="description">
+<p class="sub_title">放进时光蛋里。</p>
+<div class="my_socials">
+<a href="mailto://me@sswin.site" target="_blank" title="mail"><i class="ri-mail-fill"></i></a>
+<a href="http://sms%3A%2F%2F18336983040" target="_blank" title="phone"><i class="ri-phone-fill"></i></a>
+<a href="//t.me/karl_s_bot" target="_blank" title="telegram"><i class="ri-telegram-fill"></i></a>
+<a href="https://zozo.sswin.site/index.xml" target="_blank" title="rss" type="application/rss+xml"><i class="ri-rss-fill"></i></a>
+</div>
+</div>
+</div>
+</div>
+<div class="content">
+<div class="post_page">
+<div class="post animate__animated animate__fadeInDown">
+<div class="post_title post_detail_title">
+<h2><a href="/posts/0611e889/">Latex公式识别OCR「mathpix的开源平替」</a></h2>
+<span class="date">2023.04.23</span>
+</div>
+<div class="post_content markdown"><h2 id="前言">前言</h2>
+<p>之前在网上找到一个公式OCR工具：<code>mathpix</code>非常好用，而且每个月100个免费识别的额度足够日常使用了。但最近写份作业，发现没识别几个公式额度就满了？查看账户发现<code>mathpix</code>免费额度变成了<strong>10</strong> Snips per month？</p>
+<img alt="image-20230423144156742" src="image-20230423144156742.png" style="zoom:25%;"/>
+<p>并且其订阅费用每月4.99$不算便宜，然后就在GitHub上简单找了一下，看有没有开源的公式OCR软件。</p>
+<img alt="image-20230423144311199" src="image-20230423144311199.png" style="zoom: 25%;"/>
+<img alt="image-20230423144747844" src="image-20230423144747844.png" style="zoom: 33%;"/>
+<p>果不其然，Latex-OCR<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" role="doc-noteref">1</a></sup>，（pix2tex: Using a ViT to convert images of equations into LaTeX code）.十分好用，基本可以替代<code>mathpix</code>70%的功能。印刷版的公式识别基本没有错误，手写的识别准确率有待提高，最重要的，这个<code>pix2tex</code>是部署在本地的，随时可用，不用担心以后变成付费软件。</p>
+<h2 id="pix2tex介绍">pix2tex介绍</h2>
+<blockquote>
+<p><a href="https://github.com/lukas-blecher/LaTeX-OCR"><img alt="GitHub" src="https://camo.githubusercontent.com/e26e90c96a0fee3de5b53a7232dfc0fd0f49f5ea6c9ec1449563dd40aefee496/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f6c756b61732d626c65636865722f4c615465582d4f4352"/></a> <a href="https://pix2tex.readthedocs.io/en/latest/?badge=latest"><img alt="Documentation Status" src="https://camo.githubusercontent.com/a1e97c43de4d4103a26c25283713f88502716ee63268614479f996d7270d0f48/68747470733a2f2f72656164746865646f63732e6f72672f70726f6a656374732f706978327465782f62616467652f3f76657273696f6e3d6c6174657374"/></a> <a href="https://pypi.org/project/pix2tex"><img alt="PyPI" src="https://camo.githubusercontent.com/00f77be6f9cb1f78be8f53d85089b77df578e3e516777c949f781edd45a0e715/68747470733a2f2f696d672e736869656c64732e696f2f707970692f762f706978327465783f6c6f676f3d70797069"/></a> <a href="https://pypi.org/project/pix2tex"><img alt="PyPI - Downloads" src="https://camo.githubusercontent.com/8013cfd657c31171c1946c0b6b2b40a1c90d1f7c8d842dde209185d307e922b3/68747470733a2f2f696d672e736869656c64732e696f2f707970692f646d2f706978327465783f6c6f676f3d70797069"/></a> <a href="https://github.com/lukas-blecher/LaTeX-OCR/releases"><img alt="GitHub all releases" src="https://camo.githubusercontent.com/a369d922b436161c9e517492585f9f424cba04cfd4d20b7815fed921d02cf3b1/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f646f776e6c6f6164732f6c756b61732d626c65636865722f4c615465582d4f43522f746f74616c3f636f6c6f723d626c7565266c6f676f3d676974687562"/></a> <a href="https://hub.docker.com/r/lukasblecher/pix2tex"><img alt="Docker Pulls" src="https://camo.githubusercontent.com/c1b9289285efdec353acaa08d4f0e55791c3c832f08106b99ce54850ed14df14/68747470733a2f2f696d672e736869656c64732e696f2f646f636b65722f70756c6c732f6c756b6173626c65636865722f706978327465783f6c6f676f3d646f636b6572"/></a> <a href="https://colab.research.google.com/github/lukas-blecher/LaTeX-OCR/blob/main/notebooks/LaTeX_OCR_test.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/84f0493939e0c4de4e6dbe113251b4bfb5353e57134ffd9fcab6b8714514d4d1/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a> <a href="https://huggingface.co/spaces/lukbl/LaTeX-OCR"><img alt="Hugging Face Spaces" src="https://camo.githubusercontent.com/00380c35e60d6b04be65d3d94a58332be5cc93779f630bcdfc18ab9a3a7d3388/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f25463025394625413425393725323048756767696e67253230466163652d5370616365732d626c7565"/></a></p>
+<p>The goal of this project is to create a learning based system that takes an image of a math formula and returns corresponding LaTeX code.</p>
+<p><img alt="109183599-69431f00-778e-11eb-9809-d42b9451e018" src="https://user-images.githubusercontent.com/55287601/109183599-69431f00-778e-11eb-9809-d42b9451e018.png"/></p>
+</blockquote>
+<h2 id="安装">安装</h2>
+<p>直接在终端输入：</p>
+<div class="highlight"><pre class="chroma" tabindex="0"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pip install pix2tex
+</span></span></code></pre></div><p>即可。</p>
+<p>当然，前提是你需要一些基础环境：</p>
+<ul>
+<li>Python 3.7+</li>
+<li>PyTorch<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" role="doc-noteref">2</a></sup> installed（Follow their instructions <a href="https://pytorch.org/get-started/locally/">here</a>.）</li>
+</ul>
+<h3 id="基础使用">基础使用:</h3>
+<ol>
+<li>
+<p>打开一个终端；</p>
+</li>
+<li>
+<p>输入<code>pix2tex</code>，回车；</p>
+<img alt="image-20230423150000799" src="image-20230423150000799.png" style="zoom:33%;"/>
+</li>
+</ol>
+<blockquote>
+<p>此时就可以开始使用了。</p>
+</blockquote>
+<ol start="3">
+<li>
+<p>截图并复制到剪切板</p>
+<img alt="image-20230423151259320" src="image-20230423151259320.png" style="zoom:33%;"/>
+</li>
+<li>
+<p>在终端页面回车即可返回OCR识别的结果，是以Latex格式输出</p>
+<img alt="image-20230423151226904" src="image-20230423151226904.png" style="zoom:33%;"/>
+</li>
+<li>
+<p>将以上输出结果复制到markdown、latex或者word<sup id="fnref:3"><a class="footnote-ref" href="#fn:3" role="doc-noteref">3</a></sup>都可直接识别出公式</p>
+<img alt="image-20230423151542885" src="image-20230423151542885.png" style="zoom: 33%;"/>
+<p>公式：
+$$
+\sigma_{B}^{2}(k)=\frac{[m_{G}P_{1}(k)-m(k)]^{2}}{P_{1}(k)[1-P_{1}(k)]}
+$$</p>
+</li>
+</ol>
+<h3 id="其他使用方法">其他使用方法</h3>
+<ol start="2">
+<li>
+<p>Thanks to <a href="https://github.com/katie-lim">@katie-lim</a>, you can use a nice user interface as a quick way to get the model prediction. Just call the GUI with <code>latexocr</code>. From here you can take a screenshot and the predicted latex code is rendered using <a href="https://www.mathjax.org/">MathJax</a> and copied to your clipboard.</p>
+<p>Under linux, it is possible to use the GUI with <code>gnome-screenshot</code> which comes with multiple monitor support if <code>gnome-screenshot</code> was installed beforehand.</p>
+<img alt="117812740-77b7b780-b262-11eb-81f6-fc19766ae2ae" src="https://user-images.githubusercontent.com/55287601/117812740-77b7b780-b262-11eb-81f6-fc19766ae2ae.gif" style="zoom:33%;"/>
+<p>If the model is unsure about the what’s in the image it might output a different prediction every time you click “Retry”. With the <code>temperature</code> parameter you can control this behavior (low temperature will produce the same result).</p>
+</li>
+<li>
+<p>You can use an API. This has additional dependencies. Install via <code>pip install -U pix2tex[api]</code> and run</p>
+<div class="highlight"><pre class="chroma" tabindex="0"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">python -m pix2tex.api.run
+</span></span></code></pre></div><p>to start a <a href="https://streamlit.io/">Streamlit</a> demo that connects to the API at port 8502. There is also a docker image available for the API: <a href="https://hub.docker.com/r/lukasblecher/pix2tex">https://hub.docker.com/r/lukasblecher/pix2tex</a> <a href="https://hub.docker.com/r/lukasblecher/pix2tex"><img alt="Docker Image Size (latest by date)" src="https://camo.githubusercontent.com/5c27282a4120785ec54bf7b85a9e3dd4da3b73758535c8865a3ea4fd06cc4a4e/68747470733a2f2f696d672e736869656c64732e696f2f646f636b65722f696d6167652d73697a652f6c756b6173626c65636865722f706978327465783f6c6f676f3d646f636b6572"/></a></p>
+<div class="highlight"><pre class="chroma" tabindex="0"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker pull lukasblecher/pix2tex:api
+</span></span><span class="line"><span class="cl">docker run --rm -p 8502:8502 lukasblecher/pix2tex:api
+</span></span></code></pre></div><p>To also run the streamlit demo run</p>
+<div class="highlight"><pre class="chroma" tabindex="0"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker run --rm -it -p 8501:8501 --entrypoint python lukasblecher/pix2tex:api pix2tex/api/run.py
+</span></span></code></pre></div><p>and navigate to http://localhost:8501/</p>
+</li>
+<li>
+<p>Use from within Python</p>
+<div class="highlight"><pre class="chroma" tabindex="0"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">from PIL import Image
+</span></span><span class="line"><span class="cl">from pix2tex.cli import LatexOCR
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">img = Image.open('path/to/image.png')
+</span></span><span class="line"><span class="cl">model = LatexOCR()
+</span></span><span class="line"><span class="cl">print(model(img))
+</span></span></code></pre></div><p>The model works best with images of smaller resolution. That’s why I added a preprocessing step where another neural network predicts the optimal resolution of the input image. This model will automatically resize the custom image to best resemble the training data and thus increase performance of images found in the wild. Still it’s not perfect and might not be able to handle huge images optimally, so don’t zoom in all the way before taking a picture.</p>
+<p>Always double check the result carefully. You can try to redo the prediction with an other resolution if the answer was wrong.</p>
+<p><strong>Want to use the package?</strong></p>
+<p>I’m trying to compile a documentation right now.</p>
+<p>Visit here: <a href="https://pix2tex.readthedocs.io/">https://pix2tex.readthedocs.io/</a></p>
+</li>
+</ol>
+<h2 id="其他">其他</h2>
+<h3 id="training-the-model-open-in-colabhttpscamogithubusercontentcom84f0493939e0c4de4e6dbe113251b4bfb5353e57134ffd9fcab6b8714514d4d168747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667httpscolabresearchgooglecomgithublukas-blecherlatex-ocrblobmainnotebookslatex_ocr_trainingipynb">Training the model <a href="https://colab.research.google.com/github/lukas-blecher/LaTeX-OCR/blob/main/notebooks/LaTeX_OCR_training.ipynb"><img alt="Open In Colab" src="https://camo.githubusercontent.com/84f0493939e0c4de4e6dbe113251b4bfb5353e57134ffd9fcab6b8714514d4d1/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667"/></a></h3>
+<p>···</p>
+<p>参考：<a href="https://github.com/lukas-blecher/LaTeX-OCR">lukas-blecher/LaTeX-OCR: pix2tex: Using a ViT to convert images of equations into LaTeX code. (github.com)</a></p>
+<p>···</p>
+<p>结束🔚。</p>
+<div class="footnotes" role="doc-endnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p><a href="https://github.com/lukas-blecher/LaTeX-OCR">lukas-blecher/LaTeX-OCR</a> <a class="footnote-backref" href="#fnref:1" role="doc-backlink">↩︎</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://pytorch.org/get-started/locally/">pytorch</a> <a class="footnote-backref" href="#fnref:2" role="doc-backlink">↩︎</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://blog.csdn.net/m0_69599137/article/details/127456927">在word中输入LaTeX公式</a> <a class="footnote-backref" href="#fnref:3" role="doc-backlink">↩︎</a></p>
+</li>
+</ol>
+</div></div>
+<div class="post_footer">
+</div>
+</div>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOIgezUM4CTB6g" data-emit-metadata="0" data-input-position="top" data-lang="zh-CN" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="winsight/hugo_zozo_comment" data-repo-id="R_kgDOIgezUA" data-strict="0" data-theme="light" src="https://giscus.app/client.js">
+</script>
+</div>
+</div>
+</div>
+<a class="back_to_top" href="#" id="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+<footer class="footer">
+<div class="powered_by">
+<a href="https://timegg.top">SSWIN © 2022 ,</a>
+<a href="http://www.gohugo.io/">Powered by Hugo.</a>
+</div>
+<div class="footer_slogan">
+<span>享受当下。</span>
+</div>
+</footer>
+<script>
+	(function () {
+		const customFont = document.createElement('link');
+		customFont.href = "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&display=swap";
+		customFont.type = "text/css";
+		customFont.rel = "stylesheet";
+		document.head.appendChild(customFont);
+	}());
+</script>
+<script src="https://zozo.sswin.site/js/jquery-3.5.1.min.js"></script>
+<link href="https://zozo.sswin.site/css/fancybox.min.css" rel="stylesheet"/>
+<script src="https://zozo.sswin.site/js/fancybox.min.js"></script>
+<script src="https://zozo.sswin.site/js/zozo.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ]
+    });
+  });
+</script>
+</body>
+</html>
