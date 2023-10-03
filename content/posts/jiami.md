@@ -3,6 +3,7 @@ title: "pwd"
 date: 2023-05-10T15:28:56+08:00
 slug: "jiami"
 hidden: true
+draft: true
 tags: []
 keywords: []
 description: ""
