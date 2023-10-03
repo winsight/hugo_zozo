@@ -55,12 +55,12 @@
     {{ else if .Site.Params.description }}
     <meta name="twitter:description" content="{{ .Site.Params.description | safeHTML }}" />
     {{ end }}
-    <meta name="twitter:image" content="{{ .Site.BaseURL }}/images/favicon.ico" />
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}images/favicon.ico" />
     
 
     <meta property="og:title" content="{{ $title }}" />
     <meta property="og:url" content="{{ .RelPermalink }}" />
-    <meta property="og:image" content="{{ .Site.BaseURL }}/images/favicon.ico" />
+    <meta property="og:image" content="{{ .Site.BaseURL }}images/favicon.ico" />
     {{ if .Description }}
     <meta name="og:description" content="{{ .Description | safeHTML }}" />
     {{ else if .IsPage }}
@@ -73,7 +73,7 @@
     <meta property="og:article:author" content="" />
 
     
-    <link rel="shortcut icon" href="{{ .Site.BaseURL }}/images/favicon.ico" />
+    <link rel="shortcut icon" href="{{ .Site.BaseURL }}images/favicon.ico" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}css/normalize.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
